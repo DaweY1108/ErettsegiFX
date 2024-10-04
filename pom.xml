@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>me.dawey.erettsegifx/me.dawey.erettsegifx.HelloApplication</mainClass>
+                            <mainClass>me.dawey.erettsegifx/me.dawey.erettsegifx.Main</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

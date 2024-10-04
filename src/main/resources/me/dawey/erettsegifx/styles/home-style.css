@@ -1,0 +1,19 @@
+.windowButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.windowButton:hover {
+    -fx-background-color: rgba(68, 68, 68, 0.29);  /* Gray background on hover */
+}
+
+.windowButtonExit {
+    -fx-background-color: transparent;
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+}
+
+.windowButtonExit:hover {
+    -fx-background-color: rgba(255, 0, 0, 0.29);  /* Red background on hover */
+}
