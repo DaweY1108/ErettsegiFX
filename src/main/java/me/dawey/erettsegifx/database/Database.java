@@ -56,7 +56,7 @@ public class Database {
         } catch (Exception ex) {
             System.out.println("Nem található JDBC driver osztály!");
         }
-        //return new JdbcConnectionSource("jdbc:mysql://api.uniassist.hu:3306/TesztErett", "admin", "***");
+        //return new JdbcConnectionSource("jdbc:mysql://url:3306/table", "user", "pass");
         return new JdbcConnectionSource(connString);
     }
 
