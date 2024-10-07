@@ -13,7 +13,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class Database {
-    private static final String connString = "jdbc:sqlite:erettsegi.db";
+    private static final String connString = "jdbc:sqlite:adatok.db";
     private Dao<Vizsgazo, Integer> vizsgazoDao;
     private Dao<Vizsgatargy, Integer> vizsgatargyDao;
     private Dao<Vizsga, Integer> vizsgaDao;

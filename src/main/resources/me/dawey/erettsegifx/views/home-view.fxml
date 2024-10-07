@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane minHeight="200.0" minWidth="300.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #121212;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
+<BorderPane minHeight="200.0" minWidth="300.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #121212;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
 
     <top>
         <GridPane fx:id="topGridPane" alignment="CENTER" style="-fx-background-color: black" BorderPane.alignment="CENTER">
