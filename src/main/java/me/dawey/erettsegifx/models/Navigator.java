@@ -1,34 +1,33 @@
 package me.dawey.erettsegifx.models;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.BorderPane;
 import me.dawey.erettsegifx.Main;
 
-import java.io.IOException;
 import java.util.Objects;
 
 public class Navigator {
 
     // Golden to Dave: A masik oldalon latszik majd, hogy miert igy csinaltam, nem ertek a javahoz ezert ez ilyen teszta, ahogy Csik Norbert ma mondta
 
-    public static final String CREATE = "create-view.fxml";
-    public static final String READ = "read-view.fxml";
-    public static final String UPDATE = "update-view.fxml";
-    public static final String DELETE = "delete-view.fxml";
-    public static final String HOME = "home-view.fxml";
+    // Konstansok a navigatorhoz, hogy csak itt kelljen modositani a file neveket
 
-    public void navigate(String fxml, GridPane topGridPane) {
+    public static final String CREATE = "views/create-view.fxml";
+    public static final String READ = "views/read-view.fxml";
+    public static final String UPDATE = "views/update-view.fxml";
+    public static final String DELETE = "views/delete-view.fxml";
 
-        try {
-            Stage stage = (Stage) topGridPane.getScene().getWindow();
-            stage.setTitle("ErettsegiFX");
-            stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(Main.class.getResource(fxml))), 800, 600));
+    public void navigate(String fxml, BorderPane containerBorderPane) {
+            try{
+                // Ez megfogra a fxml-t, es betolti a containerBorderPane center-be
+                containerBorderPane.getChildren().clear();
+                containerBorderPane.setCenter(new FXMLLoader(Objects.requireNonNull(Main.class.getResource(fxml))).load());
+            }
+            catch (Exception e){
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+                e.printStackTrace();
+            }
+
 
     }
 }

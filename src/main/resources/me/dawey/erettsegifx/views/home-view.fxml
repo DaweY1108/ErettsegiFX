@@ -4,8 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.geometry.Insets?>
-<BorderPane minHeight="200.0" minWidth="300.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #121212;" stylesheets="@styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.UpdateController">
+<BorderPane minHeight="200.0" minWidth="300.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #121212;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
 
     <top>
         <GridPane fx:id="topGridPane" alignment="CENTER" style="-fx-background-color: black" BorderPane.alignment="CENTER">
@@ -32,8 +31,7 @@
                     <Button onAction="#updateButtonAction" styleClass="windowButton" text="Update" />
                     <Button onAction="#deleteButtonAction" styleClass="windowButton" text="Delete" />
                 </HBox>
-
-                 <!-- Minimize Button -->
+                <!-- Minimize Button -->
                 <Button onAction="#minimizeWindow" styleClass="windowButton" text="➖" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
 
                 <!-- Exit Button -->
@@ -41,10 +39,13 @@
             </children>
         </GridPane>
     </top>
-    <center>
-
-        <VBox alignment="CENTER" spacing="10.0">
-            <Label text="Welcome to the Update page!" textFill="white" />
-        </VBox>
+    <center >
+        <BorderPane fx:id="containerBorderPane" style="-fx-background-color: #121212;">
+            <Pane fx:id="centerPane">
+                <VBox alignment="CENTER" spacing="10.0">
+                    <Label text="Welcome to the Home Page" textFill="white" />
+                </VBox>
+            </Pane>
+        </BorderPane>
     </center>
 </BorderPane>

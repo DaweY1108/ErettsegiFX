@@ -16,7 +16,7 @@ public class Main extends Application {
     //Start the application
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("home-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("views/home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("ErettsegiFX");
