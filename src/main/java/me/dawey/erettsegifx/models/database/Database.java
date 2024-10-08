@@ -1,13 +1,13 @@
-package me.dawey.erettsegifx.database;
+package me.dawey.erettsegifx.models.database;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
-import me.dawey.erettsegifx.database.tables.Vizsga;
-import me.dawey.erettsegifx.database.tables.Vizsgatargy;
-import me.dawey.erettsegifx.database.tables.Vizsgazo;
+import me.dawey.erettsegifx.models.database.tables.Vizsga;
+import me.dawey.erettsegifx.models.database.tables.Vizsgatargy;
+import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
 
 import java.sql.SQLException;
 import java.util.List;

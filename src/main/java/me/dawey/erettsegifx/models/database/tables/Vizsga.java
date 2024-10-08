@@ -1,4 +1,4 @@
-package me.dawey.erettsegifx.database.tables;
+package me.dawey.erettsegifx.models.database.tables;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
