@@ -4,6 +4,7 @@ module me.dawey.erettsegifx {
     requires ormlite.jdbc;
     requires java.sql;
     requires jakarta.xml.ws;
+    requires v20;
 
 
     opens me.dawey.erettsegifx to javafx.fxml, com.sun.xml.bind, jakarta.xml.bind;

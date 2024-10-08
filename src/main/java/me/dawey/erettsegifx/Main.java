@@ -1,5 +1,6 @@
 package me.dawey.erettsegifx;
 
+import com.oanda.v20.account.AccountSummary;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,6 +13,7 @@ import me.dawey.erettsegifx.models.mnbank.data.Day;
 import me.dawey.erettsegifx.models.mnbank.data.ExchangeData;
 import me.dawey.erettsegifx.models.mnbank.data.MNBExchangeRates;
 import me.dawey.erettsegifx.models.mnbank.data.Rate;
+import me.dawey.erettsegifx.models.oanda.Oanda;
 
 import java.io.IOException;
 import java.util.List;
@@ -34,6 +36,7 @@ public class Main extends Application {
             System.out.println(vizsgazo.getNev());
         }
 
+        /*
         BankManager bankManager = new BankManager();
         List<ExchangeData> exchangeDataList = bankManager.getExchangeDatas("2022-08-14", "2022-09-14", "EUR");
         for (ExchangeData exchangeData : exchangeDataList) {
@@ -43,6 +46,16 @@ public class Main extends Application {
             System.out.println("Value: " + exchangeData.getValue() + "\n");
 
         }
+        */
+
+        Oanda oanda = new Oanda();
+        AccountSummary summary = oanda.getSummary();
+        System.out.println("Account ID: " + summary.getId());
+        System.out.println("Account Alias: " + summary.getAlias());
+        System.out.println("Account Balance: " + summary.getBalance());
+        System.out.println("Account Currency: " + summary.getCurrency());
+        System.out.println("Account Created By: " + summary.getCreatedByUserID());
+        System.out.println("Account Created Time: " + summary.getCreatedTime());
 
         System.out.println("Az app sikeresen elindult!");
     }
