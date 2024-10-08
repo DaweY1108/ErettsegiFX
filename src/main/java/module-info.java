@@ -14,4 +14,6 @@ module me.dawey.erettsegifx {
     exports me.dawey.erettsegifx.database;
     opens me.dawey.erettsegifx.controllers to javafx.fxml;
     opens me.dawey.erettsegifx.database.tables to ormlite.jdbc;
+    exports me.dawey.erettsegifx.models;
+    opens me.dawey.erettsegifx.models to javafx.fxml;
 }

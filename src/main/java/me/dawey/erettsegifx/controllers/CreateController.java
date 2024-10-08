@@ -7,8 +7,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import me.dawey.erettsegifx.models.Navigator;
 
-
-public class HomeController {
+public class CreateController {
     private double xOffset = 0;
     private double yOffset = 0;
     private final Navigator navigator = new Navigator();
@@ -46,11 +45,10 @@ public class HomeController {
         });
     }
 
-    // Golden to Dave: Ezert kell a spagetti code amott, ha meg nem lattad, majd sirni fogsz
 
     public void createButtonAction(ActionEvent actionEvent) {
 //        navigator.navigate(Navigator.CREATE);
-        navigator.navigate("home-view.fxml", topGridPane);
+        navigator.navigate("create-view.fxml", topGridPane);
 
     }
     public void readButtonAction(ActionEvent actionEvent) {
@@ -68,6 +66,4 @@ public class HomeController {
         navigator.navigate("delete-view.fxml", topGridPane);
 
     }
-
-
 }
