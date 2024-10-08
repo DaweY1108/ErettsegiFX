@@ -17,3 +17,8 @@
 .windowButtonExit:hover {
     -fx-background-color: rgba(255, 0, 0, 0.29);  /* Red background on hover */
 }
+.menuButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}

@@ -20,7 +20,7 @@ public class Main extends Application {
     //Start the application
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("home-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("views/home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("ErettsegiFX");
@@ -33,6 +33,7 @@ public class Main extends Application {
         System.out.println("Az app sikeresen elindult!");
     }
 
+    //App entry point
     public static void main(String[] args) {
         Logger.setGlobalLogLevel(Level.ERROR);
         launch();
