@@ -5,10 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import me.dawey.erettsegifx.database.Database;
-import me.dawey.erettsegifx.database.tables.Vizsgazo;
-import soap.MNBArfolyamServiceSoap;
-import soap.MNBArfolyamServiceSoapImpl;
+import me.dawey.erettsegifx.models.database.Database;
+import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
+import me.dawey.erettsegifx.models.mnbank.BankManager;
+import me.dawey.erettsegifx.models.mnbank.data.Day;
+import me.dawey.erettsegifx.models.mnbank.data.ExchangeData;
+import me.dawey.erettsegifx.models.mnbank.data.MNBExchangeRates;
+import me.dawey.erettsegifx.models.mnbank.data.Rate;
 
 import java.io.IOException;
 import java.util.List;
@@ -31,26 +34,24 @@ public class Main extends Application {
             System.out.println(vizsgazo.getNev());
         }
 
+        BankManager bankManager = new BankManager();
+        List<ExchangeData> exchangeDataList = bankManager.getExchangeDatas("2022-08-14", "2022-09-14", "EUR");
+        for (ExchangeData exchangeData : exchangeDataList) {
+            System.out.println("Date: " + exchangeData.getDate());
+            System.out.println("Currency: " + exchangeData.getCurrency());
+            System.out.println("Unit: " + exchangeData.getUnit());
+            System.out.println("Value: " + exchangeData.getValue() + "\n");
 
-        MNBArfolyamServiceSoapImpl impl = new MNBArfolyamServiceSoapImpl();
-        MNBArfolyamServiceSoap service = impl.getCustomBindingMNBArfolyamServiceSoap();
-        try {
-            System.out.println(service.getInfo());
-            System.out.println(service.getCurrentExchangeRates());
-            System.out.println(service.getExchangeRates("2022-08-14","2022-09-14","EUR"));
-        } catch (Exception e) {
-            System.err.print(e);
         }
-
 
         System.out.println("Az app sikeresen elindult!");
     }
 
     //App entry point
     public static void main(String[] args) {
-        System.setProperty("com.sun.xml.ws.transport.http.client.HttpTransportPipe.dump", "true");
-        System.setProperty("com.sun.xml.internal.ws.transport.http.client.HttpTransportPipe.dump", "true");
-        System.setProperty("com.sun.xml.ws.util.pipe.StandaloneTubeAssembler.dump", "true");
+        //System.setProperty("com.sun.xml.ws.transport.http.client.HttpTransportPipe.dump", "true");
+        //System.setProperty("com.sun.xml.internal.ws.transport.http.client.HttpTransportPipe.dump", "true");
+        //System.setProperty("com.sun.xml.ws.util.pipe.StandaloneTubeAssembler.dump", "true");
 
         launch();
     }
