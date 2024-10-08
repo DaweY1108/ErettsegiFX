@@ -19,7 +19,6 @@ public class HomeController {
         stage.setIconified(true);
     }
 
-    // Method to exit the application
     @FXML
     private void exitApplication() {
         Stage stage = (Stage) topGridPane.getScene().getWindow();
