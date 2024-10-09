@@ -28,11 +28,12 @@ public class Main extends Application {
         stage.show();
 
         System.out.println("Adatbazis inicializalasa...");
-        Database database = new Database();
+            Database database = new Database();
         System.out.println("Adatbazis inicializalva!");
         System.out.println("Az app sikeresen elindult!");
     }
 
+    //App entry point
     public static void main(String[] args) {
         Logger.setGlobalLogLevel(Level.ERROR);
         launch();
