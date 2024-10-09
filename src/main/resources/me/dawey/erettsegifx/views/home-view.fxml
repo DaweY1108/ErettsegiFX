@@ -4,6 +4,8 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <BorderPane minHeight="200.0" minWidth="300.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #121212;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
 
     <top>
@@ -25,11 +27,19 @@
 <!--                    </font>-->
 <!--                </Label>-->
                 <!--       Create, Update, Delete          -->
-                <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: black" BorderPane.alignment="CENTER">
-                    <Button onAction="#createButtonAction" styleClass="windowButton" text="Create" />
-                    <Button onAction="#readButtonAction" styleClass="windowButton" text="Read" />
-                    <Button onAction="#updateButtonAction" styleClass="windowButton" text="Update" />
-                    <Button onAction="#deleteButtonAction" styleClass="windowButton" text="Delete" />
+                <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: black" GridPane.columnIndex="0">
+                    <ComboBox fx:id="actionComboBox" onAction="#handleComboBoxAction" styleClass="dark-theme-combo-box">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Create" />
+                                <String fx:value="Read" />
+                                <String fx:value="Read 2" />
+                                <String fx:value="Update" />
+                                <String fx:value="Delete" />
+
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
                 </HBox>
                 <!-- Minimize Button -->
                 <Button onAction="#minimizeWindow" styleClass="windowButton" text="➖" GridPane.columnIndex="3" GridPane.halignment="CENTER" />

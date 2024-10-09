@@ -14,6 +14,7 @@ public class Navigator {
 
     public static final String CREATE = "views/create-view.fxml";
     public static final String READ = "views/read-view.fxml";
+    public static final String READ2 = "views/read-2-view.fxml";
     public static final String UPDATE = "views/update-view.fxml";
     public static final String DELETE = "views/delete-view.fxml";
 

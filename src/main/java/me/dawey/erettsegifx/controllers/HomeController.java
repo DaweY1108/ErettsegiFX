@@ -1,6 +1,8 @@
 package me.dawey.erettsegifx.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -18,6 +20,9 @@ public class HomeController {
 
     @FXML
     private GridPane topGridPane;
+
+    @FXML
+    private ComboBox<String> actionComboBox;
 
     @FXML
     private void minimizeWindow() {
@@ -51,26 +56,42 @@ public class HomeController {
 
     // Golden to Dave: Ezert kell a spagetti code amott, ha meg nem lattad, majd sirni fogsz
     //             ui: Sikerult spagetti nelkul
-    public void createButtonAction() {
+    public void createButtonAction(ActionEvent event) {
 //        navigator.navigate(Navigator.CREATE);
-        navigator.navigate(Navigator.CREATE, containerBorderPane);
 
     }
-    public void readButtonAction() {
+    public void readButtonAction(ActionEvent event) {
 //        navigator.navigate(Navigator.READ);
-        navigator.navigate(Navigator.READ, containerBorderPane);
 
     }
-    public void updateButtonAction() {
+    public void updateButtonAction(ActionEvent event) {
 //        navigator.navigate(Navigator.UPDATE);
-        navigator.navigate(Navigator.UPDATE, containerBorderPane);
 
     }
-    public void deleteButtonAction() {
+    public void deleteButtonAction(ActionEvent event) {
 //        navigator.navigate(Navigator.DELETE);
-        navigator.navigate(Navigator.DELETE, containerBorderPane);
 
     }
 
 
+    public void handleComboBoxAction(ActionEvent actionEvent) {
+        String selectedAction = actionComboBox.getValue();
+        switch (selectedAction) {
+            case "Create":
+                navigator.navigate(Navigator.CREATE, containerBorderPane);
+                break;
+            case "Read":
+                navigator.navigate(Navigator.READ, containerBorderPane);
+                break;
+            case "Read 2":
+                navigator.navigate(Navigator.READ2, containerBorderPane);
+                break;
+            case "Update":
+                navigator.navigate(Navigator.UPDATE, containerBorderPane);
+                break;
+            case "Delete":
+                navigator.navigate(Navigator.DELETE, containerBorderPane);
+                break;
+        }
+    }
 }
