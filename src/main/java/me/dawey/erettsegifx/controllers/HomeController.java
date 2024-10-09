@@ -54,25 +54,6 @@ public class HomeController {
         });
     }
 
-    // Golden to Dave: Ezert kell a spagetti code amott, ha meg nem lattad, majd sirni fogsz
-    //             ui: Sikerult spagetti nelkul
-    public void createButtonAction(ActionEvent event) {
-//        navigator.navigate(Navigator.CREATE);
-
-    }
-    public void readButtonAction(ActionEvent event) {
-//        navigator.navigate(Navigator.READ);
-
-    }
-    public void updateButtonAction(ActionEvent event) {
-//        navigator.navigate(Navigator.UPDATE);
-
-    }
-    public void deleteButtonAction(ActionEvent event) {
-//        navigator.navigate(Navigator.DELETE);
-
-    }
-
 
     public void handleComboBoxAction(ActionEvent actionEvent) {
         String selectedAction = actionComboBox.getValue();
