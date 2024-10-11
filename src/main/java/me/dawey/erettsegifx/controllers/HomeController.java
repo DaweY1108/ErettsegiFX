@@ -6,14 +6,18 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import me.dawey.erettsegifx.models.NavigationAction;
 import me.dawey.erettsegifx.models.Navigator;
 
 
 public class HomeController {
     private double xOffset = 0;
     private double yOffset = 0;
-    private final Navigator navigator = new Navigator();
+
+    @FXML
+    public HBox menuBarContainer;
 
     @FXML
     private BorderPane containerBorderPane;
@@ -39,7 +43,10 @@ public class HomeController {
     @FXML
     public void initialize() {
         makeDraggable(topGridPane);
+        Navigator.setHomeController(this);
     }
+
+
 
     private void makeDraggable(GridPane node) {
         node.setOnMousePressed((MouseEvent event) -> {
@@ -54,25 +61,30 @@ public class HomeController {
         });
     }
 
+    public HBox getMenuBarContainer() {
+        return menuBarContainer;
+    }
+    public BorderPane getContainerBorderPane() {
+        return containerBorderPane;
+    }
 
     public void handleComboBoxAction(ActionEvent actionEvent) {
         String selectedAction = actionComboBox.getValue();
         switch (selectedAction) {
-            case "Create":
-                navigator.navigate(Navigator.CREATE, containerBorderPane);
+            case "CRUD":
+                Navigator.instance.navigate(NavigationAction.CREATE, this);
                 break;
-            case "Read":
-                navigator.navigate(Navigator.READ, containerBorderPane);
+            case "SOAP":
+                Navigator.instance.navigate(NavigationAction.SOAP, this);
                 break;
-            case "Read 2":
-                navigator.navigate(Navigator.READ2, containerBorderPane);
+
+            case "FOREX":
+                Navigator.instance.navigate(NavigationAction.FOREX, this);
                 break;
-            case "Update":
-                navigator.navigate(Navigator.UPDATE, containerBorderPane);
+            case "THREADING":
+                Navigator.instance.navigate(NavigationAction.THREADING, this);
                 break;
-            case "Delete":
-                navigator.navigate(Navigator.DELETE, containerBorderPane);
-                break;
+
         }
     }
 }

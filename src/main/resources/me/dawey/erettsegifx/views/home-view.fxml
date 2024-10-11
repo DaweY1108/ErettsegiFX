@@ -28,18 +28,19 @@
 <!--                </Label>-->
                 <!--       Create, Update, Delete          -->
                 <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: black" GridPane.columnIndex="0">
-                    <ComboBox fx:id="actionComboBox" onAction="#handleComboBoxAction" styleClass="dark-theme-combo-box">
+                    <ComboBox fx:id="actionComboBox" onAction="#handleComboBoxAction" styleClass="dark-theme-combo-box" promptText="Home">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
-                                <String fx:value="Create" />
-                                <String fx:value="Read" />
-                                <String fx:value="Read 2" />
-                                <String fx:value="Update" />
-                                <String fx:value="Delete" />
-
+                                <String fx:value="CRUD" />
+                                <String fx:value="SOAP" />
+                                <String fx:value="THREADING" />
+                                <String fx:value="FOREX" />
                             </FXCollections>
                         </items>
                     </ComboBox>
+                </HBox>
+                <HBox GridPane.columnIndex="1" fx:id="menuBarContainer">
+
                 </HBox>
                 <!-- Minimize Button -->
                 <Button onAction="#minimizeWindow" styleClass="windowButton" text="➖" GridPane.columnIndex="3" GridPane.halignment="CENTER" />

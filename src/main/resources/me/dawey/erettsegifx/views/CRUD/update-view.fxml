@@ -5,11 +5,11 @@
 <?import javafx.scene.control.Button?>
 <BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.ReadController" stylesheets="@../styles/forms-style.css" >
+            fx:controller="me.dawey.erettsegifx.controllers.UpdateController" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox alignment="CENTER" spacing="10.0">
-            <Label text="Welcome to the Read 2 Page" textFill="white" />
-            <Button onAction="#readButtonAction" styleClass="windowButton" text="Read" />
+            <Label text="Welcome to the Update Page" textFill="white" />
+            <Button onAction="#updateButtonAction" styleClass="windowButton" text="Update" />
         </VBox>
     </Pane>
 </BorderPane>
