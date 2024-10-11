@@ -1,23 +1,32 @@
 package me.dawey.erettsegifx.controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import me.dawey.erettsegifx.models.NavigationAction;
 import me.dawey.erettsegifx.models.Navigator;
 
 
 public class HomeController {
     private double xOffset = 0;
     private double yOffset = 0;
-    private final Navigator navigator = new Navigator();
+
+    @FXML
+    public HBox menuBarContainer;
 
     @FXML
     private BorderPane containerBorderPane;
 
     @FXML
     private GridPane topGridPane;
+
+    @FXML
+    private ComboBox<String> actionComboBox;
 
     @FXML
     private void minimizeWindow() {
@@ -34,7 +43,10 @@ public class HomeController {
     @FXML
     public void initialize() {
         makeDraggable(topGridPane);
+        Navigator.setHomeController(this);
     }
+
+
 
     private void makeDraggable(GridPane node) {
         node.setOnMousePressed((MouseEvent event) -> {
@@ -49,28 +61,30 @@ public class HomeController {
         });
     }
 
-    // Golden to Dave: Ezert kell a spagetti code amott, ha meg nem lattad, majd sirni fogsz
-    //             ui: Sikerult spagetti nelkul
-    public void createButtonAction() {
-//        navigator.navigate(Navigator.CREATE);
-        navigator.navigate(Navigator.CREATE, containerBorderPane);
-
+    public HBox getMenuBarContainer() {
+        return menuBarContainer;
     }
-    public void readButtonAction() {
-//        navigator.navigate(Navigator.READ);
-        navigator.navigate(Navigator.READ, containerBorderPane);
-
-    }
-    public void updateButtonAction() {
-//        navigator.navigate(Navigator.UPDATE);
-        navigator.navigate(Navigator.UPDATE, containerBorderPane);
-
-    }
-    public void deleteButtonAction() {
-//        navigator.navigate(Navigator.DELETE);
-        navigator.navigate(Navigator.DELETE, containerBorderPane);
-
+    public BorderPane getContainerBorderPane() {
+        return containerBorderPane;
     }
 
+    public void handleComboBoxAction(ActionEvent actionEvent) {
+        String selectedAction = actionComboBox.getValue();
+        switch (selectedAction) {
+            case "CRUD":
+                Navigator.instance.navigate(NavigationAction.CREATE, this);
+                break;
+            case "SOAP":
+                Navigator.instance.navigate(NavigationAction.SOAP, this);
+                break;
 
+            case "FOREX":
+                Navigator.instance.navigate(NavigationAction.FOREX, this);
+                break;
+            case "THREADING":
+                Navigator.instance.navigate(NavigationAction.THREADING, this);
+                break;
+
+        }
+    }
 }

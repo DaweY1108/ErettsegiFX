@@ -1,0 +1,15 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="me.dawey.erettsegifx.controllers.ThreadingController" stylesheets="@../../styles/forms-style.css">
+    <Pane>
+        <VBox alignment="CENTER" spacing="10.0" >
+            <Label text="Welcome to the Threading Page" textFill="white" />
+            <Button onAction="#threadingTestButtonAction" styleClass="windowButton" text="Threading content button" />
+        </VBox>
+    </Pane>
+</BorderPane>
