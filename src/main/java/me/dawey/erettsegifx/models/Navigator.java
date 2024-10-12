@@ -19,14 +19,14 @@ public class Navigator {
         setHomeController = homeController;
     }
 
-    public static void navigate(NavigationAction navaction, HomeController homeController) {
+    public static void navigate(NavigationAction navigator, HomeController homeController) {
             try{
                 // Ez megfogra a content_fxml-t, es betolti a containerBorderPane center-be
                 homeController.getContainerBorderPane().getChildren().clear();
-                homeController.getContainerBorderPane().setCenter(new FXMLLoader(Objects.requireNonNull(Main.class.getResource(navaction.getContentFxml()))).load());
+                homeController.getContainerBorderPane().setCenter(new FXMLLoader(Objects.requireNonNull(Main.class.getResource(navigator.getContentFxml()))).load());
 
                 homeController.getMenuBarContainer().getChildren().clear();
-                homeController.getMenuBarContainer().getChildren().add(new FXMLLoader(Objects.requireNonNull(Main.class.getResource(navaction.getMenuBarFxml()))).load());
+                homeController.getMenuBarContainer().getChildren().add(new FXMLLoader(Objects.requireNonNull(Main.class.getResource(navigator.getMenuBarFxml()))).load());
             }
             catch (Exception e){
 

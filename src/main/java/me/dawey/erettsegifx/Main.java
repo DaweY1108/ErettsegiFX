@@ -11,6 +11,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import me.dawey.erettsegifx.models.database.Database;
+import me.dawey.erettsegifx.models.database.tables.Vizsga;
+import me.dawey.erettsegifx.models.database.tables.Vizsgatargy;
+import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
 import me.dawey.erettsegifx.models.oanda.Oanda;
 
 import java.io.IOException;
@@ -28,7 +31,9 @@ public class Main extends Application {
         stage.show();
 
         System.out.println("Adatbazis inicializalasa...");
-            Database database = new Database();
+        Database database = new Database();
+
+
         System.out.println("Adatbazis inicializalva!");
         System.out.println("Az app sikeresen elindult!");
     }

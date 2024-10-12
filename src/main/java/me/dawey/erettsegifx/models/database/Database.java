@@ -5,6 +5,7 @@ import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
+import javafx.scene.chart.PieChart;
 import me.dawey.erettsegifx.models.database.tables.Vizsga;
 import me.dawey.erettsegifx.models.database.tables.Vizsgatargy;
 import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
@@ -13,6 +14,10 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class Database {
+    private static Database publicInstance;
+    public static Database getInstance() {
+        return publicInstance;
+    }
     private static final String connString = "jdbc:sqlite:adatok.db";
     private Dao<Vizsgazo, Integer> vizsgazoDao;
     private Dao<Vizsgatargy, Integer> vizsgatargyDao;
@@ -28,6 +33,7 @@ public class Database {
             vizsgatargyDao = DaoManager.createDao(source, Vizsgatargy.class);
             vizsgaDao = DaoManager.createDao(source, Vizsga.class);
             createTables(source);
+            publicInstance = this;
             source.close();
         } catch (SQLException ex) {
             System.out.println("Hiba az adatbazis inicializalasakor! \nUzenet:" + ex.getMessage());

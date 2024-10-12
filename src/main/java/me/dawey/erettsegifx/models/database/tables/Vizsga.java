@@ -24,6 +24,13 @@ public class Vizsga {
     @DatabaseField(canBeNull = false)
     private int irasbeli;
 
+    // TODO: Delete if can be got from ReadController
+    @DatabaseField(canBeNull = false)
+    private String vizsgazoNev;
+
+    // TODO: Delete if can be got from ReadController
+    @DatabaseField(canBeNull = false)
+    private String vizsgatargyNev;
     public Vizsga() {}
 
     public Vizsga(Vizsgazo vizsgazo, Vizsgatargy vizsgatargy, int szobeli, int irasbeli) {
@@ -31,6 +38,15 @@ public class Vizsga {
         this.vizsgatargy = vizsgatargy;
         this.szobeli = szobeli;
         this.irasbeli = irasbeli;
+
+        this.vizsgazoNev = vizsgazo.getNev();
+        this.vizsgatargyNev = vizsgatargy.getNev();
+    }
+    public String getVizsgazoNev() {
+        return vizsgazoNev;
+    }
+    public String getVizsgatargyNev() {
+        return vizsgatargyNev;
     }
 
     public Vizsgazo getVizsgazo() {
