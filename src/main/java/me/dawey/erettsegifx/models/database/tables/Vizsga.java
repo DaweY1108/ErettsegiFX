@@ -64,4 +64,8 @@ public class Vizsga {
     public void setIrasbeli(int irasbeli) {
         this.irasbeli = irasbeli;
     }
+    @Override
+    public String toString() {
+        return vizsgazo.getNev() + " - " + vizsgatargy.getNev();
+    }
 }

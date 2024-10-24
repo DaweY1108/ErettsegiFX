@@ -2,6 +2,7 @@ package me.dawey.erettsegifx.models.database.tables;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
+import javafx.beans.value.ObservableValue;
 
 @DatabaseTable(tableName = "vizsgatargy")
 public class Vizsgatargy {
@@ -54,4 +55,11 @@ public class Vizsgatargy {
         this.irmax = irmax;
     }
 
+    public ObservableValue<Vizsgatargy> nevProperty() {
+        return null;
+    }
+    @Override
+    public String toString() {
+        return nev;
+    }
 }

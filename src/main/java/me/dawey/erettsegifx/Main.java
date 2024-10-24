@@ -16,7 +16,7 @@ import me.dawey.erettsegifx.models.oanda.Oanda;
 import java.io.IOException;
 
 public class Main extends Application {
-
+    public static Database database;
     //Start the application
     @Override
     public void start(Stage stage) throws IOException {
@@ -26,9 +26,9 @@ public class Main extends Application {
         stage.setTitle("ErettsegiFX");
         stage.setScene(scene);
         stage.show();
+        database = new Database();
 
         System.out.println("Adatbazis inicializalasa...");
-            Database database = new Database();
         System.out.println("Adatbazis inicializalva!");
         System.out.println("Az app sikeresen elindult!");
     }
@@ -38,4 +38,6 @@ public class Main extends Application {
         Logger.setGlobalLogLevel(Level.ERROR);
         launch();
     }
+
+
 }

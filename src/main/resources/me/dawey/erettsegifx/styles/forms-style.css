@@ -1,2 +1,20 @@
 /* Dave kedveert van ez a file, mert itt lehet a form-okat szépen formázni :) */
 
+.readTableView {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-min-width: 800px;
+}
+
+.readTableView .column-header-background {
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+
