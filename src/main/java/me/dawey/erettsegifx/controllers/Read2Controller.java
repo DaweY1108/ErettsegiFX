@@ -4,20 +4,20 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import me.dawey.erettsegifx.models.NavigationAction;
 import me.dawey.erettsegifx.models.Navigator;
 import me.dawey.erettsegifx.models.database.Database;
 import me.dawey.erettsegifx.models.database.tables.Vizsga;
-import javafx.scene.control.TableView;
+
 import java.util.List;
 
 public class Read2Controller {
     @FXML
     public Button backButton;
+    public CheckBox vizsgazoCheckBox;
+    public CheckBox vizsgatargyCheckBox;
     @FXML
     private TextField vizsgazoNameField;
     @FXML
@@ -47,7 +47,6 @@ public class Read2Controller {
 
 
     public void onFileredQueryRequest(ActionEvent actionEvent) {
-
         vizsgazoColumn.setCellValueFactory(new PropertyValueFactory<>("vizsgazo"));
         vizsgatargyColumn.setCellValueFactory(new PropertyValueFactory<>("vizsgatargy"));
         szobeliColumn.setCellValueFactory(new PropertyValueFactory<>("szobeli"));
@@ -55,10 +54,19 @@ public class Read2Controller {
 
         Database database = new Database();
         List<Vizsga> vizsgaListFromDb = database.getAllVizsgak();
+
+        String vizsgazoName = vizsgazoNameField.getText();
+        String vizsgatargyName = vizsgatargyNameField.getText();
+
+        if (vizsgazoName != null && !vizsgazoName.isEmpty() && vizsgazoCheckBox.isSelected()) {
+            vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgazo().getNev().contains(vizsgazoName));
+        }
+
+        if (vizsgatargyName != null && !vizsgatargyName.isEmpty() && vizsgatargyCheckBox.isSelected()) {
+            vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgatargy().getNev().contains(vizsgatargyName));
+        }
+
         vizsgaList = FXCollections.observableArrayList(vizsgaListFromDb);
-
-
         vizsgaTable.setItems(vizsgaList);
-
     }
 }

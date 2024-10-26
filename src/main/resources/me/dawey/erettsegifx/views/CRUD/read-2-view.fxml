@@ -7,27 +7,30 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.CheckBox?>
 <BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.Read2Controller" stylesheets="@../../styles/forms-style.css" >
+            fx:controller="me.dawey.erettsegifx.controllers.Read2Controller" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox alignment="CENTER" spacing="10.0">
             <HBox spacing="10.0" alignment="CENTER">
                 <Label text="Vizsgazo Name:" textFill="white"/>
                 <TextField fx:id="vizsgazoNameField"/>
+                <CheckBox fx:id="vizsgazoCheckBox" textFill="white"/>
                 <Label text="Vizsgatargy Name:" textFill="white"/>
                 <TextField fx:id="vizsgatargyNameField"/>
+                <CheckBox fx:id="vizsgatargyCheckBox" textFill="white"/>
                 <Button text="Apply Filter" onAction="#onFileredQueryRequest"/>
             </HBox>
-            <TableView fx:id="vizsgaTable" stylesheets="@../../styles/forms-style.css" styleClass="readTableView" VBox.vgrow="ALWAYS" >
+            <TableView fx:id="vizsgaTable" stylesheets="@../../styles/forms-style.css" styleClass="readTableView" VBox.vgrow="ALWAYS">
                 <columns>
                     <TableColumn fx:id="vizsgazoColumn" text="Vizsgazo"/>
-                    <TableColumn fx:id="vizsgatargyColumn" text="Vizsgatargy" />
-                    <TableColumn fx:id="szobeliColumn" text="Szobeli" />
-                    <TableColumn fx:id="irasbeliColumn" text="Irasbeli" />
+                    <TableColumn fx:id="vizsgatargyColumn" text="Vizsgatargy"/>
+                    <TableColumn fx:id="szobeliColumn" text="Szobeli"/>
+                    <TableColumn fx:id="irasbeliColumn" text="Irasbeli"/>
                 </columns>
             </TableView>
-        <Button fx:id="backButton" text="Vissza" onAction="#goToRead" styleClass="windowButton" stylesheets="@../../styles/home-style.css"/>
+            <Button fx:id="backButton" text="Vissza" onAction="#goToRead" styleClass="windowButton" stylesheets="@../../styles/home-style.css"/>
         </VBox>
     </Pane>
 </BorderPane>
