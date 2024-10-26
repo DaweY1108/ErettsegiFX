@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -19,7 +20,8 @@ import java.util.List;
 
 public class ReadController {
 
-
+    @FXML
+    public Button btGoToReadTwo;
     @FXML
     private TableView<Vizsga> vizsgaTable;
 
@@ -49,4 +51,7 @@ public class ReadController {
         vizsgaTable.setItems(vizsgaList);
     }
 
+    public void goToReadTwo() {
+        Navigator.navigate(NavigationAction.READ2, Navigator.getHomeController());
+    }
 }

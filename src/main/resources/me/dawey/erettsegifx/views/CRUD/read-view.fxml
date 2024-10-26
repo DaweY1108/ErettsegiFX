@@ -18,6 +18,7 @@
                     <TableColumn fx:id="irasbeliColumn" text="Irasbeli" />
                 </columns>
             </TableView>
+            <Button fx:id="btGoToReadTwo" text="Go To Read 2" onAction="#goToReadTwo" styleClass="windowButton" stylesheets="@../../styles/home-style.css"/>
         </VBox>
     </Pane>
 </BorderPane>

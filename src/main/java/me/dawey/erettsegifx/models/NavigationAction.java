@@ -3,6 +3,7 @@ package me.dawey.erettsegifx.models;
 public enum NavigationAction {
     CREATE("views/CRUD/create-view.fxml", "views/CRUD/crud-menu-bar.fxml"),
     READ("views/CRUD/read-view.fxml", "views/CRUD/crud-menu-bar.fxml"),
+    READ2("views/CRUD/read-2-view.fxml", "views/CRUD/crud-menu-bar.fxml"),
     UPDATE("views/CRUD/update-view.fxml", "views/CRUD/crud-menu-bar.fxml"),
     DELETE("views/CRUD/delete-view.fxml", "views/CRUD/crud-menu-bar.fxml"),
 
