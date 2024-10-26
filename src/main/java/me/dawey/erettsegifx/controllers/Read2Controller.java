@@ -18,6 +18,10 @@ public class Read2Controller {
     public Button backButton;
     public CheckBox vizsgazoCheckBox;
     public CheckBox vizsgatargyCheckBox;
+    public CheckBox classCheckBox;
+    public ToggleGroup caseSensitivityGroup;
+    public RadioButton caseSensitiveRadioButton;
+    public RadioButton notCaseSensitiveRadioButton;
     @FXML
     private TextField vizsgazoNameField;
     @FXML
@@ -34,7 +38,8 @@ public class Read2Controller {
     private ObservableList<Vizsga> vizsgaList;
     @FXML
     private TableView<Vizsga> vizsgaTable;
-
+    @FXML
+    private ComboBox<String> classComboBox;
     @FXML
     public void initialize() {
         System.out.println("Read2Controller initialized");
@@ -57,13 +62,26 @@ public class Read2Controller {
 
         String vizsgazoName = vizsgazoNameField.getText();
         String vizsgatargyName = vizsgatargyNameField.getText();
+        boolean caseSensitive = caseSensitiveRadioButton.isSelected();
 
         if (vizsgazoName != null && !vizsgazoName.isEmpty() && vizsgazoCheckBox.isSelected()) {
-            vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgazo().getNev().contains(vizsgazoName));
+            if (caseSensitive) {
+                vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgazo().getNev().contains(vizsgazoName));
+            } else {
+                vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgazo().getNev().toLowerCase().contains(vizsgazoName.toLowerCase()));
+            }
         }
 
         if (vizsgatargyName != null && !vizsgatargyName.isEmpty() && vizsgatargyCheckBox.isSelected()) {
-            vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgatargy().getNev().contains(vizsgatargyName));
+            if (caseSensitive) {
+                vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgatargy().getNev().contains(vizsgatargyName));
+            } else {
+                vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgatargy().getNev().toLowerCase().contains(vizsgatargyName.toLowerCase()));
+            }
+        }
+
+        if (classComboBox.getValue() != null && !classComboBox.getValue().isEmpty() && classCheckBox.isSelected()) {
+            vizsgaListFromDb.removeIf(vizsga -> !vizsga.getVizsgazo().getOsztaly().contains(classComboBox.getValue()));
         }
 
         vizsgaList = FXCollections.observableArrayList(vizsgaListFromDb);
