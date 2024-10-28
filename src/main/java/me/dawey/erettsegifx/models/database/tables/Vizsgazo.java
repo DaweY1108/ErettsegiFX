@@ -43,9 +43,6 @@ public class Vizsgazo {
     }
 
 
-    public ObservableValue<Vizsgazo> nevProperty() {
-        return null;
-    }
     @Override
     public String toString() {
         return nev;

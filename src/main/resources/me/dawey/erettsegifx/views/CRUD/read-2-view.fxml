@@ -48,8 +48,8 @@
             </HBox>
             <HBox spacing="10.0" alignment="CENTER">
                 <Label text="Case Sensitivity:" textFill="white"/>
-                <RadioButton toggleGroup="$caseGroup" layoutX="160.0" layoutY="16.0" mnemonicParsing="false" text="Nagy karakter erzekeny" selected="true" fx:id="caseSensitiveRadioButton"/>
-                <RadioButton toggleGroup="$caseGroup" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" text="Nem nagy karakter erzekeny" fx:id="notCaseSensitiveRadioButton" />
+                <RadioButton toggleGroup="$caseGroup" layoutX="160.0" layoutY="16.0" mnemonicParsing="false" text="Nagy karakter erzekeny" selected="true" fx:id="caseSensitiveRadioButton" textFill="white"/>
+                <RadioButton toggleGroup="$caseGroup" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" text="Nem nagy karakter erzekeny" fx:id="notCaseSensitiveRadioButton" textFill="white"/>
             </HBox>
             <TableView fx:id="vizsgaTable" stylesheets="@../../styles/forms-style.css" styleClass="readTableView" VBox.vgrow="ALWAYS">
                 <columns>

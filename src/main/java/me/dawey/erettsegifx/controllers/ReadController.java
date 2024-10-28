@@ -18,6 +18,8 @@ import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
 
 import java.util.List;
 
+import static me.dawey.erettsegifx.Main.database;
+
 public class ReadController {
 
     @FXML
@@ -45,10 +47,12 @@ public class ReadController {
         szobeliColumn.setCellValueFactory(new PropertyValueFactory<>("szobeli"));
         irasbeliColumn.setCellValueFactory(new PropertyValueFactory<>("irasbeli"));
 
-        Database database = new Database();
         List<Vizsga> vizsgaListFromDb = database.getAllVizsgak();
+        //List<Vizsgazo> vizsgazoListFromDb = database.getAllVizsgazok();
+
         vizsgaList = FXCollections.observableArrayList(vizsgaListFromDb);
         vizsgaTable.setItems(vizsgaList);
+
     }
 
     public void goToReadTwo() {

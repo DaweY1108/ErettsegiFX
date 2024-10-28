@@ -28,6 +28,8 @@ public class Main extends Application {
         stage.show();
         database = new Database();
 
+
+
         System.out.println("Adatbazis inicializalasa...");
         System.out.println("Adatbazis inicializalva!");
         System.out.println("Az app sikeresen elindult!");

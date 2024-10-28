@@ -90,6 +90,7 @@ public class Database {
     public void addVizsgazo(Vizsgazo vizsgazo) {
         try {
             vizsgazoDao.create(vizsgazo);
+            System.out.println("Vizsgazo hozzaadva: " + vizsgazo.getNev());
         } catch (SQLException ex) {
             System.out.println("Hiba az adatok hozzaadasakor! \nUzenet:" + ex.getMessage());
         }
@@ -168,7 +169,22 @@ public class Database {
             System.out.println("Hiba az adatbazis kapcsolat bezarasakor! \nUzenet:" + ex.getMessage());
         }
     }
-
+    public Vizsgazo getVizsgazo(int azon) {
+        try {
+            return vizsgazoDao.queryForId(azon);
+        } catch (SQLException ex) {
+            System.out.println("Hiba az adatok lekeresekor! \nUzenet:" + ex.getMessage());
+            return null;
+        }
+    }
+    public Vizsgatargy getVizsgatargy(int azon) {
+        try {
+            return vizsgatargyDao.queryForId(azon);
+        } catch (SQLException ex) {
+            System.out.println("Hiba az adatok lekeresekor! \nUzenet:" + ex.getMessage());
+            return null;
+        }
+    }
 
 
 
