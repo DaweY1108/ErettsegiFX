@@ -19,14 +19,20 @@
     <Pane>
         <fx:define><ToggleGroup fx:id="caseGroup" /></fx:define>
         <VBox alignment="CENTER" spacing="10.0">
+            <VBox>
+                <Label textFill="white" text="Vizsgara valo szures"/>
+            </VBox>
             <HBox spacing="10.0" alignment="CENTER">
-                <CheckBox fx:id="vizsgazoCheckBox" textFill="white"/>
-                <Label text="Vizsgazo Name:" textFill="white"/>
-                <TextField fx:id="vizsgazoNameField"/>
-                <CheckBox fx:id="vizsgatargyCheckBox" textFill="white"/>
-                <Label text="Vizsgatargy Name:" textFill="white"/>
-                <TextField fx:id="vizsgatargyNameField"/>
-                <Button text="Apply Filter" onAction="#onFileredQueryRequest"/>
+                    <CheckBox fx:id="vizsgazoCheckBox" textFill="white"/>
+                <VBox>
+                    <Label text="Vizsgazo Name:" textFill="white"/>
+                    <TextField fx:id="vizsgazoNameField"/>
+                </VBox>
+                    <CheckBox fx:id="vizsgatargyCheckBox" textFill="white"/>
+                <VBox>
+                    <Label text="Vizsgatargy Name:" textFill="white"/>
+                    <TextField fx:id="vizsgatargyNameField"/>
+                </VBox>
             </HBox>
             <HBox spacing="10.0" alignment="CENTER">
                 <CheckBox fx:id="classCheckBox"/>
@@ -51,6 +57,7 @@
                 <RadioButton toggleGroup="$caseGroup" layoutX="160.0" layoutY="16.0" mnemonicParsing="false" text="Nagy karakter erzekeny" selected="true" fx:id="caseSensitiveRadioButton" textFill="white"/>
                 <RadioButton toggleGroup="$caseGroup" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" text="Nem nagy karakter erzekeny" fx:id="notCaseSensitiveRadioButton" textFill="white"/>
             </HBox>
+            <Button text="Apply Filter" onAction="#onFileredQueryRequest"/>
             <TableView fx:id="vizsgaTable" stylesheets="@../../styles/forms-style.css" styleClass="readTableView" VBox.vgrow="ALWAYS">
                 <columns>
                     <TableColumn fx:id="vizsgazoColumn" text="Vizsgazo"/>

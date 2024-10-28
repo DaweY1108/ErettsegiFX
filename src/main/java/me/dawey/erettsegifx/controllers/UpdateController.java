@@ -6,12 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import me.dawey.erettsegifx.models.database.Database;
-import me.dawey.erettsegifx.models.database.tables.Vizsga;
-import me.dawey.erettsegifx.models.database.tables.Vizsgatargy;
 import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
-import org.w3c.dom.Text;
-
 import static me.dawey.erettsegifx.Main.database;
 
 import java.util.List;
@@ -33,7 +28,6 @@ public class UpdateController {
 
     private void loadComboBoxData() {
         List<Vizsgazo> vizsgazokList = database.getAllVizsgazok();
-        System.out.println(vizsgazokList.size());
         ObservableList<String> vizsgazok = FXCollections.observableArrayList();
         for (Vizsgazo vizsgazo : vizsgazokList) {
             vizsgazok.add(Integer.toString(vizsgazo.getAzon()));
@@ -43,10 +37,17 @@ public class UpdateController {
 
     @FXML
     private void handleUpdateRecord(ActionEvent actionEvent) {
-        String newName = newNameField.getText();
-        String newClass = newClassField.getText();
-        Vizsgazo vizsgazo = new Vizsgazo(newName, newClass);
-        database.updateVizsgazo(vizsgazo);
+        String selectedId = vizsgazoComboBox.getValue();
+        if (selectedId != null) {
+            Vizsgazo vizsgazo = database.getVizsgazo(Integer.parseInt(selectedId));
+            if (vizsgazo != null) {
+                vizsgazo.setNev(newNameField.getText());
+                vizsgazo.setOsztaly(newClassField.getText());
+                database.updateVizsgazo(vizsgazo);
+            }
+        }
+        newNameField.clear();
+        newClassField.clear();
         loadComboBoxData();
     }
 }

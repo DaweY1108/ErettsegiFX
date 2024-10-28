@@ -18,6 +18,8 @@ import static me.dawey.erettsegifx.Main.database;
 public class DeleteController {
 
     @FXML
+    private TableColumn vizsgatargyAzonColumn;
+    @FXML
     private TableView vizsgaTable;
     @FXML
     private TableColumn vizsgaAzonColumn;
@@ -56,7 +58,7 @@ public class DeleteController {
 
         // Vizsgak
 
-        vizsgazoColumn.setCellValueFactory(new PropertyValueFactory<>("vizsgazo"));
+        vizsgaAzonColumn.setCellValueFactory(new PropertyValueFactory<>("azon"));
         vizsgatargyColumn.setCellValueFactory(new PropertyValueFactory<>("vizsgatargy"));
         szobeliColumn.setCellValueFactory(new PropertyValueFactory<>("szobeli"));
         irasbeliColumn.setCellValueFactory(new PropertyValueFactory<>("irasbeli"));
@@ -67,6 +69,7 @@ public class DeleteController {
 
         // Vizsgazok
 
+        vizsgazoColumn.setCellValueFactory(new PropertyValueFactory<>("vizsgazo"));
         vizsgazoAzonColumn.setCellValueFactory(new PropertyValueFactory<>("azon"));
         vizsgazoNameColumn.setCellValueFactory(new PropertyValueFactory<>("nev"));
         vizsgazoClassNameColumn.setCellValueFactory(new PropertyValueFactory<>("osztaly"));
@@ -78,6 +81,7 @@ public class DeleteController {
 
         // Vizsgatargyak
 
+        vizsgatargyAzonColumn.setCellValueFactory(new PropertyValueFactory<>("azon"));
         vizsgatargyNameColumn.setCellValueFactory(new PropertyValueFactory<>("nev"));
         irmaxColumn.setCellValueFactory(new PropertyValueFactory<>("irmax"));
         szomaxColumn.setCellValueFactory(new PropertyValueFactory<>("szomax"));

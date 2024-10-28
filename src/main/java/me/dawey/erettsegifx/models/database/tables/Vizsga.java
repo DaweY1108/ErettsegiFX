@@ -70,6 +70,6 @@ public class Vizsga {
     }
     @Override
     public String toString() {
-        return vizsgazo.getNev() + " - " + vizsgatargy.getNev();
+        return vizsgazo.getNev() + " - " + vizsgatargy.getNev() + " - " + szobeli + " - " + irasbeli;
     }
 }

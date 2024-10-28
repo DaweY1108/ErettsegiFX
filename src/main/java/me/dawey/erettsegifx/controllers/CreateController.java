@@ -51,6 +51,7 @@ public class CreateController {
         }
 
         Vizsga vizsga = new Vizsga(vizsgazo, vizsgatargy, Integer.parseInt(szobeliEredmenyField.getText()), Integer.parseInt(irasbeliEredmenyField.getText()));
+
         database.addVizsga(vizsga);
         vizsgaVizsgazoAzonositoField.setText("");
         vizsgaVizsgatargyAzonositoField.setText("");

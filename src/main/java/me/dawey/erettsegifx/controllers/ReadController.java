@@ -21,9 +21,26 @@ import java.util.List;
 import static me.dawey.erettsegifx.Main.database;
 
 public class ReadController {
-
     @FXML
-    public Button btGoToReadTwo;
+    private TableColumn vizsgaAzonColumn;
+    @FXML
+    private TableView vizsgazoTable;
+    @FXML
+    private TableColumn vizsgazoAzonColumn;
+    @FXML
+    private TableColumn vizsgazoNameColumn;
+    @FXML
+    private TableColumn vizsgazoClassNameColumn;
+    @FXML
+    private TableColumn vizsgatargyAzonColumn;
+    @FXML
+    private TableView vizsgatargyTable;
+    @FXML
+    private TableColumn vizsgatargyNameColumn;
+    @FXML
+    private TableColumn irmaxColumn;
+    @FXML
+    private TableColumn szomaxColumn;
     @FXML
     private TableView<Vizsga> vizsgaTable;
 
@@ -42,16 +59,39 @@ public class ReadController {
     private ObservableList<Vizsga> vizsgaList;
 
     public void initialize() {
+        // Vizsgak
+        vizsgaAzonColumn.setCellValueFactory(new PropertyValueFactory<>("azon"));
         vizsgazoColumn.setCellValueFactory(new PropertyValueFactory<>("vizsgazo"));
         vizsgatargyColumn.setCellValueFactory(new PropertyValueFactory<>("vizsgatargy"));
         szobeliColumn.setCellValueFactory(new PropertyValueFactory<>("szobeli"));
         irasbeliColumn.setCellValueFactory(new PropertyValueFactory<>("irasbeli"));
 
         List<Vizsga> vizsgaListFromDb = database.getAllVizsgak();
-        //List<Vizsgazo> vizsgazoListFromDb = database.getAllVizsgazok();
-
-        vizsgaList = FXCollections.observableArrayList(vizsgaListFromDb);
+        ObservableList<Vizsga> vizsgaList = FXCollections.observableArrayList(vizsgaListFromDb);
         vizsgaTable.setItems(vizsgaList);
+
+        // Vizsgazok
+
+        vizsgazoAzonColumn.setCellValueFactory(new PropertyValueFactory<>("azon"));
+        vizsgazoNameColumn.setCellValueFactory(new PropertyValueFactory<>("nev"));
+        vizsgazoClassNameColumn.setCellValueFactory(new PropertyValueFactory<>("osztaly"));
+
+        List<Vizsgazo> vizsgazoListFromDb = database.getAllVizsgazok();
+        ObservableList<Vizsgazo> vizsgazoList = FXCollections.observableArrayList(vizsgazoListFromDb);
+        vizsgazoTable.setItems(vizsgazoList);
+
+
+        // Vizsgatargyak
+
+        vizsgatargyAzonColumn.setCellValueFactory(new PropertyValueFactory<>("azon"));
+        vizsgatargyNameColumn.setCellValueFactory(new PropertyValueFactory<>("nev"));
+        irmaxColumn.setCellValueFactory(new PropertyValueFactory<>("irmax"));
+        szomaxColumn.setCellValueFactory(new PropertyValueFactory<>("szomax"));
+
+        List<Vizsgatargy> vizsgatargyListFromDb = database.getAllVizsgatargyak();
+        ObservableList<Vizsgatargy> vizsgatargyList = FXCollections.observableArrayList(vizsgatargyListFromDb);
+        vizsgatargyTable.setItems(vizsgatargyList);
+
 
     }
 
