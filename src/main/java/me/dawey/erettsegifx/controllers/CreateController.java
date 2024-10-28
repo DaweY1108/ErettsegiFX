@@ -70,5 +70,6 @@ public class CreateController {
         database.addVizsgatargy(vizsgatargy);
         vizsgatargyNameField.setText("");
         szomaxField.setText("");
+        irmaxField.setText("");
     }
 }
