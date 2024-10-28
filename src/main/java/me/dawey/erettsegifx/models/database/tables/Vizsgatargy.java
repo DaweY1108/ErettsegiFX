@@ -55,9 +55,6 @@ public class Vizsgatargy {
         this.irmax = irmax;
     }
 
-    public ObservableValue<Vizsgatargy> nevProperty() {
-        return null;
-    }
     @Override
     public String toString() {
         return nev;

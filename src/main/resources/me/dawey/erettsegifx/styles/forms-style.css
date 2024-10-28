@@ -1,6 +1,4 @@
-/* Dave kedveert van ez a file, mert itt lehet a form-okat szépen formázni :) */
-
-.readTableView {
+.readTableView, .deleteTableView {
     -fx-background-color: #f4f4f4;
     -fx-border-color: #e0e0e0;
     -fx-border-width: 1px;
@@ -9,7 +7,7 @@
     -fx-min-width: 800px;
 }
 
-.readTableView .column-header-background {
+.readTableView .column-header-background, .deleteTableView .column-header-background {
     -fx-background-color: #f4f4f4;
     -fx-border-color: #e0e0e0;
     -fx-border-width: 1px;
@@ -17,4 +15,18 @@
     -fx-background-radius: 5px;
 }
 
+.deleteTableView {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 150px;
+}
 
+.readTableView {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 450px;
+}
+
+.vbox {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
