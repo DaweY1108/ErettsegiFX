@@ -11,8 +11,14 @@ public enum NavigationAction {
     SOAPDOWNLOAD2("views/SOAP/soap-download2.fxml", "views/SOAP/soap-menu-bar.fxml"),
     SOAPGRAPH("views/SOAP/soap-graph.fxml", "views/SOAP/soap-menu-bar.fxml"),
 
-    FOREX("views/FOREX/forex-view.fxml", "views/FOREX/forex-menu-bar.fxml"),
-    THREADING("views/THREADING/threading-view.fxml", "views/THREADING/threading-menu-bar.fxml");
+    THREADING("views/THREADING/threading-view.fxml", "views/THREADING/threading-menu-bar.fxml"),
+
+    FOREXBILLINFO("views/FOREX/forex-billing-info.fxml", "views/FOREX/forex-menu-bar.fxml"),
+    FOREXACTUAL("views/FOREX/forex-actual.fxml", "views/FOREX/forex-menu-bar.fxml"),
+    FOREXHISTORY("views/FOREX/forex-history.fxml", "views/FOREX/forex-menu-bar.fxml"),
+    FOREXPOSOPEN("views/FOREX/forex-posopen.fxml", "views/FOREX/forex-menu-bar.fxml"),
+    FOREXPOSCLOSED("views/FOREX/forex-posclose.fxml", "views/FOREX/forex-menu-bar.fxml"),
+    FOREXOPENEDPOS("views/FOREX/forex-openedpos.fxml", "views/FOREX/forex-menu-bar.fxml");
     private final String contentFxml;
     private final String menuBarFxml;
 

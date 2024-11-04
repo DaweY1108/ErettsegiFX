@@ -79,7 +79,7 @@ public class HomeController {
                 break;
 
             case "FOREX":
-                Navigator.instance.navigate(NavigationAction.FOREX, this);
+                Navigator.instance.navigate(NavigationAction.FOREXACTUAL, this);
                 break;
             case "THREADING":
                 Navigator.instance.navigate(NavigationAction.THREADING, this);

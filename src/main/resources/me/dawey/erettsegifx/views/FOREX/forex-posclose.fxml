@@ -1,0 +1,10 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="me.dawey.erettsegifx.controllers.forex.ForexActualController" stylesheets="@../../styles/forms-style.css">
+
+</BorderPane>
