@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TableColumn?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.ReadController" stylesheets="@../../styles/forms-style.css">
+            fx:controller="me.dawey.erettsegifx.controllers.crud.ReadController" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox alignment="CENTER" spacing="10.0">
             <Label text="Vizsgak" style="-fx-font-size: 10;"/>

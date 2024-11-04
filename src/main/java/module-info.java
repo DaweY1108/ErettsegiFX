@@ -16,5 +16,13 @@ module me.dawey.erettsegifx {
     opens me.dawey.erettsegifx.controllers to javafx.fxml;
     opens me.dawey.erettsegifx.models.database.tables to ormlite.jdbc;
     opens soap to com.sun.xml.bind, com.sun.xml.ws, jakarta.xml.bind;
+    exports me.dawey.erettsegifx.controllers.crud;
+    opens me.dawey.erettsegifx.controllers.crud to javafx.fxml;
+    exports me.dawey.erettsegifx.controllers.forex;
+    opens me.dawey.erettsegifx.controllers.forex to javafx.fxml;
+    exports me.dawey.erettsegifx.controllers.soap;
+    opens me.dawey.erettsegifx.controllers.soap to javafx.fxml;
+    exports me.dawey.erettsegifx.controllers.threading;
+    opens me.dawey.erettsegifx.controllers.threading to javafx.fxml;
 
 }

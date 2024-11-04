@@ -1,17 +1,13 @@
-package me.dawey.erettsegifx.controllers;
+package me.dawey.erettsegifx.controllers.crud;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import me.dawey.erettsegifx.Main;
 import me.dawey.erettsegifx.models.NavigationAction;
 import me.dawey.erettsegifx.models.Navigator;
-import me.dawey.erettsegifx.models.database.Database;
 import me.dawey.erettsegifx.models.database.tables.Vizsga;
 import me.dawey.erettsegifx.models.database.tables.Vizsgatargy;
 import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
@@ -96,6 +92,6 @@ public class ReadController {
     }
 
     public void goToReadTwo() {
-        Navigator.navigate(NavigationAction.READ2, Navigator.getHomeController());
+        Navigator.navigate(NavigationAction.CRUDREAD2, Navigator.getHomeController());
     }
 }

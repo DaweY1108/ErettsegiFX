@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.UpdateController" stylesheets="@../../styles/forms-style.css">
+            fx:controller="me.dawey.erettsegifx.controllers.crud.UpdateController" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox  alignment="CENTER" spacing="10.0">
             <HBox spacing="10.0" alignment="CENTER">
