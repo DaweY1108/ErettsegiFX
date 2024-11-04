@@ -1,15 +1,25 @@
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.soap.SoapController" stylesheets="@../../styles/forms-style.css">
-    <Pane>
-        <VBox alignment="CENTER" spacing="10.0" >
-            <Label text="Welcome to the SOAP Page" textFill="white" />
-            <Button onAction="#soapTestButtonAction" styleClass="windowButton" text="Soap content button" />
-        </VBox>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane stylesheets="@../../styles/forms-style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.soap.SoapDownloadController">
+    <Pane fx:id="centerPane">
+        <VBox alignment="CENTER" spacing="10.0" />
     </Pane>
+   <center>
+        <VBox alignment="CENTER" spacing="10.0">
+             <Label text="MNB Adatok letöltése" />
+             <Button onAction="#soapDownloadButtonAction" text="Letöltés" />
+         <Label fx:id="soapDownloadLabel" text="Label" textFill="#33ff00">
+            <font>
+               <Font size="30.0" />
+            </font>
+         </Label>
+        </VBox>
+   </center>
+   <right>
+
+   </right>
 </BorderPane>

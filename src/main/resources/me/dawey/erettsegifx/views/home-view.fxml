@@ -3,10 +3,11 @@
 <?import java.lang.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
 
     <top>
         <GridPane fx:id="topGridPane" alignment="CENTER" style="-fx-background-color: black" BorderPane.alignment="CENTER">
@@ -32,10 +33,6 @@
                             </FXCollections>
                         </items>
                     </ComboBox>
-                    <Label text="⬅ Valassz oldalt" textFill="WHITE">
-                  <font>
-                     <Font size="16.0" />
-                  </font></Label>
                 </HBox>
                 <HBox fx:id="menuBarContainer" GridPane.columnIndex="1">
 
@@ -51,13 +48,29 @@
     <center>
         <BorderPane fx:id="containerBorderPane">
             <Pane fx:id="centerPane">
-                <VBox alignment="CENTER" spacing="10.0">
-                    <Label alignment="CENTER" prefHeight="570.0" prefWidth="800.0" text="Udvozollek az alkalmazasban!" textFill="white">
-                  <font>
-                     <Font name="Hack Bold Italic" size="28.0" />
-                  </font></Label>
-                </VBox>
+                <VBox alignment="CENTER" spacing="10.0" />
             </Pane>
+         <center>
+            <ImageView fitHeight="300.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+         </center>
+         <bottom>
+            <Label text="Válassz egy menüpontot a legördülő listából." BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </bottom>
+         <top>
+            <Label text="Üdvözöllek az ErettsegiFX-ben!" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="31.0" />
+               </font>
+            </Label>
+         </top>
         </BorderPane>
     </center>
 </BorderPane>

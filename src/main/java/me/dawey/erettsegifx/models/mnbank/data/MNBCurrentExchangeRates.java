@@ -4,18 +4,18 @@ import jakarta.xml.bind.annotation.*;
 
 import java.util.List;
 
-@XmlRootElement(name = "MNBExchangeRates")
-public class MNBExchangeRates {
+@XmlRootElement(name = "MNBCurrentExchangeRates")
+public class MNBCurrentExchangeRates {
 
-    private List<Day> days;
+    private Day day;
 
     @XmlElement(name = "Day")
-    public List<Day> getDays() {
-        return days;
+    public Day getDay() {
+        return day;
     }
 
-    public void setDays(List<Day> days) {
-        this.days = days;
+    public void setDay(Day day) {
+        this.day = day;
     }
 
     @XmlType(propOrder = {"date", "rates"})

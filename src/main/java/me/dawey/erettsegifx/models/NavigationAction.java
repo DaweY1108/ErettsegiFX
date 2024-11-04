@@ -8,8 +8,8 @@ public enum NavigationAction {
     CRUDDELETE("views/CRUD/delete-view.fxml", "views/CRUD/crud-menu-bar.fxml"),
 
     SOAPDOWNLOAD("views/SOAP/soap-download.fxml", "views/SOAP/soap-menu-bar.fxml"),
-    SOAPDOWNLOAD2("views/SOAP/soap-download.fxml", "views/SOAP/soap-menu-bar.fxml"),
-    SOAPGRAPH("views/SOAP/soap-download.fxml", "views/SOAP/soap-menu-bar.fxml"),
+    SOAPDOWNLOAD2("views/SOAP/soap-download2.fxml", "views/SOAP/soap-menu-bar.fxml"),
+    SOAPGRAPH("views/SOAP/soap-graph.fxml", "views/SOAP/soap-menu-bar.fxml"),
 
     FOREX("views/FOREX/forex-view.fxml", "views/FOREX/forex-menu-bar.fxml"),
     THREADING("views/THREADING/threading-view.fxml", "views/THREADING/threading-menu-bar.fxml");
