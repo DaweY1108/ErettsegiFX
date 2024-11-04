@@ -168,8 +168,38 @@ public class Database {
             System.out.println("Hiba az adatbazis kapcsolat bezarasakor! \nUzenet:" + ex.getMessage());
         }
     }
+    public Vizsgazo getVizsgazo(int azon) {
+        try {
+            return vizsgazoDao.queryForId(azon);
+        } catch (SQLException ex) {
+            System.out.println("Hiba az adatok lekeresekor! \nUzenet:" + ex.getMessage());
+            return null;
+        }
+    }
+    public Vizsgatargy getVizsgatargy(int azon) {
+        try {
+            return vizsgatargyDao.queryForId(azon);
+        } catch (SQLException ex) {
+            System.out.println("Hiba az adatok lekeresekor! \nUzenet:" + ex.getMessage());
+            return null;
+        }
+    }
+    public Vizsga getVizsga(int azon) {
+        try {
+            return vizsgaDao.queryForId(azon);
+        } catch (SQLException ex) {
+            System.out.println("Hiba az adatok lekeresekor! \nUzenet:" + ex.getMessage());
+            return null;
+        }
+    }
 
-
+    public void deleteVizsga(int azon) {
+        try {
+            vizsgaDao.deleteById(azon);
+        } catch (SQLException ex) {
+            System.out.println("Hiba az adatok torlesekor! \nUzenet:" + ex.getMessage());
+        }
+    }
 
 
 

@@ -1,2 +1,57 @@
-/* Dave kedveert van ez a file, mert itt lehet a form-okat szépen formázni :) */
+.readTableView, .deleteTableView {
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-min-width: 800px;
+}
 
+.readTableView .column-header-background, .deleteTableView .column-header-background {
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.deleteTableView {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 140px;
+}
+
+.readTableView {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 250px;
+}
+
+.vbox {
+    -fx-spacing: 15;
+    -fx-padding: 10;
+    -fx-alignment: center;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.combo-box {
+    -fx-pref-width: 250px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.text-field {
+    -fx-pref-width: 250px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+}

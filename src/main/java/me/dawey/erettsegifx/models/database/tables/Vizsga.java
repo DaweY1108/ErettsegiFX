@@ -23,6 +23,8 @@ public class Vizsga {
 
     @DatabaseField(canBeNull = false)
     private int irasbeli;
+    @DatabaseField(generatedId = true)
+    private int azon;
 
     public Vizsga() {}
 
@@ -60,8 +62,14 @@ public class Vizsga {
     public int getIrasbeli() {
         return irasbeli;
     }
-
+    public int getAzon() {
+        return azon;
+    }
     public void setIrasbeli(int irasbeli) {
         this.irasbeli = irasbeli;
+    }
+    @Override
+    public String toString() {
+        return vizsgazo.getNev() + " - " + vizsgatargy.getNev() + " - " + szobeli + " - " + irasbeli;
     }
 }

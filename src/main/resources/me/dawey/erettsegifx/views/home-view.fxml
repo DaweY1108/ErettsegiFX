@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.collections.FXCollections?>
-<?import java.lang.String?>
-<BorderPane minHeight="200.0" minWidth="300.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #121212;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
 
     <top>
         <GridPane fx:id="topGridPane" alignment="CENTER" style="-fx-background-color: black" BorderPane.alignment="CENTER">
@@ -21,14 +21,8 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-<!--                <Label prefHeight="41.0" prefWidth="318.0" style="-fx-padding: 12px;" text="ÉrettségiFX v1.0" textFill="white" GridPane.columnIndex="0">-->
-<!--                    <font>-->
-<!--                        <Font name="Fira Code Bold" size="13.0" />-->
-<!--                    </font>-->
-<!--                </Label>-->
-                <!--       Create, Update, Delete          -->
                 <HBox alignment="CENTER_LEFT" spacing="20.0" style="-fx-background-color: black" GridPane.columnIndex="0">
-                    <ComboBox fx:id="actionComboBox" onAction="#handleComboBoxAction" styleClass="dark-theme-combo-box" promptText="Home">
+                    <ComboBox fx:id="actionComboBox" onAction="#handleComboBoxAction" promptText="Home" styleClass="dark-theme-combo-box">
                         <items>
                             <FXCollections fx:factory="observableArrayList">
                                 <String fx:value="CRUD" />
@@ -38,23 +32,30 @@
                             </FXCollections>
                         </items>
                     </ComboBox>
+                    <Label text="⬅ Valassz oldalt" textFill="WHITE">
+                  <font>
+                     <Font size="16.0" />
+                  </font></Label>
                 </HBox>
-                <HBox GridPane.columnIndex="1" fx:id="menuBarContainer">
+                <HBox fx:id="menuBarContainer" GridPane.columnIndex="1">
 
                 </HBox>
                 <!-- Minimize Button -->
-                <Button onAction="#minimizeWindow" styleClass="windowButton" text="➖" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+                <Button onAction="#minimizeWindow" prefHeight="26.0" prefWidth="51.0" styleClass="windowButton" text="➖" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
 
                 <!-- Exit Button -->
                 <Button onAction="#exitApplication" styleClass="windowButtonExit" text="✖" GridPane.columnIndex="4" GridPane.halignment="CENTER" />
             </children>
         </GridPane>
     </top>
-    <center >
-        <BorderPane fx:id="containerBorderPane" style="-fx-background-color: #121212;">
+    <center>
+        <BorderPane fx:id="containerBorderPane">
             <Pane fx:id="centerPane">
                 <VBox alignment="CENTER" spacing="10.0">
-                    <Label text="Welcome to the Home Page" textFill="white" />
+                    <Label alignment="CENTER" prefHeight="570.0" prefWidth="800.0" text="Udvozollek az alkalmazasban!" textFill="white">
+                  <font>
+                     <Font name="Hack Bold Italic" size="28.0" />
+                  </font></Label>
                 </VBox>
             </Pane>
         </BorderPane>

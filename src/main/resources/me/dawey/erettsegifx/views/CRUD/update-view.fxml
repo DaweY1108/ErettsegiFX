@@ -3,13 +3,31 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
-<BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="me.dawey.erettsegifx.controllers.UpdateController" stylesheets="@../../styles/forms-style.css">
     <Pane>
-        <VBox alignment="CENTER" spacing="10.0">
-            <Label text="Welcome to the Update Page" textFill="white" />
-            <Button onAction="#updateButtonAction" styleClass="windowButton" text="Update" />
+        <VBox  alignment="CENTER" spacing="10.0">
+            <HBox spacing="10.0" alignment="CENTER">
+
+            <Label text="Vizsgazo ID:"/>
+                <ComboBox fx:id="vizsgazoComboBox" onAction="#handleSelectVizsgazo" styleClass="vizsgazoIdComboBox">
+
+                </ComboBox>
+            </HBox>
+            <HBox spacing="10.0" alignment="CENTER">
+                <Label text="Uj nev:"/>
+                <TextField fx:id="newNameField"/>
+            </HBox>
+            <HBox spacing="10.0" alignment="CENTER">
+                <Label text="Uj osztaly:"/>
+                <TextField fx:id="newClassField"/>
+            </HBox>
+            <Button text="Update Record" onAction="#handleUpdateRecord"/>
         </VBox>
     </Pane>
 </BorderPane>

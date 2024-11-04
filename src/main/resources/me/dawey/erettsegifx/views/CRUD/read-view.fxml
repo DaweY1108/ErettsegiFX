@@ -3,13 +3,41 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
-<BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="me.dawey.erettsegifx.controllers.ReadController" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox alignment="CENTER" spacing="10.0">
-            <Label text="Welcome to the Read Page" textFill="white" />
-            <Button onAction="#readButtonAction" styleClass="windowButton" text="Read" />
+            <Label text="Vizsgak" style="-fx-font-size: 10;"/>
+            <TableView fx:id="vizsgaTable" stylesheets="@../../styles/forms-style.css" styleClass="deleteTableView" VBox.vgrow="ALWAYS"  >
+                <columns>
+                    <TableColumn fx:id="vizsgaAzonColumn" text="Azonosito"/>
+                    <TableColumn fx:id="vizsgazoColumn" text="Vizsgazo"/>
+                    <TableColumn fx:id="vizsgatargyColumn" text="Vizsgatargy" />
+                    <TableColumn fx:id="szobeliColumn" text="Szobeli" />
+                    <TableColumn fx:id="irasbeliColumn" text="Irasbeli" />
+                </columns>
+            </TableView>
+            <Label text="Vizsgazok" style="-fx-font-size: 10;"/>
+            <TableView fx:id="vizsgazoTable" stylesheets="@../../styles/forms-style.css"  styleClass="deleteTableView" VBox.vgrow="ALWAYS" >
+                <columns>
+                    <TableColumn fx:id="vizsgazoAzonColumn" text="Azonosito"/>
+                    <TableColumn fx:id="vizsgazoNameColumn" text="Vizsgazo"/>
+                    <TableColumn fx:id="vizsgazoClassNameColumn" text="Osztaly" />
+                </columns>
+            </TableView>
+            <Label text="Vizsgatargyak" style="-fx-font-size: 10;"/>
+            <TableView fx:id="vizsgatargyTable" stylesheets="@../../styles/forms-style.css"  styleClass="deleteTableView" VBox.vgrow="ALWAYS" >
+                <columns>
+                    <TableColumn fx:id="vizsgatargyAzonColumn" text="Azonosito"/>
+                    <TableColumn fx:id="vizsgatargyNameColumn" text="Vizsgatargy"/>
+                    <TableColumn fx:id="irmaxColumn" text="Irmax" />
+                    <TableColumn fx:id="szomaxColumn" text="Szomax" />
+                </columns>
+            </TableView>
+            <Button fx:id="btGoToReadTwo" text="Go To Read 2" onAction="#goToReadTwo"/>
         </VBox>
     </Pane>
 </BorderPane>
