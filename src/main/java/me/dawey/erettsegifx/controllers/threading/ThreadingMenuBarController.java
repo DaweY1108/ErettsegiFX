@@ -1,4 +1,4 @@
-package me.dawey.erettsegifx.controllers;
+package me.dawey.erettsegifx.controllers.threading;
 
 import javafx.event.ActionEvent;
 

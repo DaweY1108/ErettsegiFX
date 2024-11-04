@@ -1,4 +1,4 @@
-package me.dawey.erettsegifx.controllers;
+package me.dawey.erettsegifx.controllers.crud;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -65,7 +65,7 @@ public class Read2Controller {
 
     @FXML
     public void goToRead() {
-        Navigator.navigate(NavigationAction.READ, Navigator.getHomeController());
+        Navigator.navigate(NavigationAction.CRUDREAD, Navigator.getHomeController());
     }
 
 

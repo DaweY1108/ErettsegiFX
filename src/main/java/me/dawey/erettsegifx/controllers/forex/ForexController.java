@@ -1,4 +1,4 @@
-package me.dawey.erettsegifx.controllers;
+package me.dawey.erettsegifx.controllers.forex;
 
 public class ForexController {
     public void forexTestButtonAction() {

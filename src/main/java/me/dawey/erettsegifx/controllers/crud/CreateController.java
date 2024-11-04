@@ -1,10 +1,8 @@
-package me.dawey.erettsegifx.controllers;
+package me.dawey.erettsegifx.controllers.crud;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import me.dawey.erettsegifx.Main;
-import me.dawey.erettsegifx.models.database.Database;
 import me.dawey.erettsegifx.models.database.tables.Vizsga;
 import me.dawey.erettsegifx.models.database.tables.Vizsgatargy;
 import me.dawey.erettsegifx.models.database.tables.Vizsgazo;

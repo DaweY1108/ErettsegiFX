@@ -1,4 +1,4 @@
-package me.dawey.erettsegifx.controllers;
+package me.dawey.erettsegifx.controllers.soap;
 
 public class SoapController {
     public void soapTestButtonAction() {

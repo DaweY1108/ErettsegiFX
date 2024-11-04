@@ -72,10 +72,10 @@ public class HomeController {
         String selectedAction = actionComboBox.getValue();
         switch (selectedAction) {
             case "CRUD":
-                Navigator.instance.navigate(NavigationAction.CREATE, this);
+                Navigator.instance.navigate(NavigationAction.CRUDCREATE, this);
                 break;
             case "SOAP":
-                Navigator.instance.navigate(NavigationAction.SOAP, this);
+                Navigator.instance.navigate(NavigationAction.SOAPDOWNLOAD, this);
                 break;
 
             case "FOREX":

@@ -8,7 +8,7 @@
 <?import javafx.scene.control.skin.TabPaneSkin.TabContentRegion?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.DeleteController" stylesheets="@../../styles/forms-style.css">
+            fx:controller="me.dawey.erettsegifx.controllers.crud.DeleteController" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox alignment="CENTER" spacing="10.0">
             <Label text="Az adatok torlesehez kattintson az adatra 2x" styleClass="deleteLabel"/>

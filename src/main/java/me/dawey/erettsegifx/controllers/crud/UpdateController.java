@@ -1,4 +1,4 @@
-package me.dawey.erettsegifx.controllers;
+package me.dawey.erettsegifx.controllers.crud;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -6,7 +6,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import me.dawey.erettsegifx.models.database.tables.Vizsga;
 import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
 import static me.dawey.erettsegifx.Main.database;
 

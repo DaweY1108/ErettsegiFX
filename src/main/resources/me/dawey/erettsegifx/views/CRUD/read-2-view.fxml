@@ -15,7 +15,7 @@
 <?import javafx.scene.control.RadioButton?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.Read2Controller" stylesheets="@../../styles/forms-style.css">
+            fx:controller="me.dawey.erettsegifx.controllers.crud.Read2Controller" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <fx:define><ToggleGroup fx:id="caseGroup" /></fx:define>
         <VBox alignment="CENTER" spacing="10.0">
