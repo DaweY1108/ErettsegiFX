@@ -6,12 +6,12 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.skin.TabPaneSkin.TabContentRegion?>
-<BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="me.dawey.erettsegifx.controllers.DeleteController" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox alignment="CENTER" spacing="10.0">
-            <Label textFill="white" text="Az adatok torlesehez kattintson az adatra 2x" styleClass="deleteLabel"/>
+            <Label text="Az adatok torlesehez kattintson az adatra 2x" styleClass="deleteLabel"/>
             <TableView fx:id="vizsgaTable" stylesheets="@../../styles/forms-style.css" styleClass="deleteTableView" VBox.vgrow="ALWAYS"  >
                 <columns>
                     <TableColumn fx:id="vizsgaAzonColumn" text="Azonosito"/>

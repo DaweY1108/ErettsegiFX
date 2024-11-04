@@ -10,8 +10,12 @@ import me.dawey.erettsegifx.models.NavigationAction;
 import me.dawey.erettsegifx.models.Navigator;
 import me.dawey.erettsegifx.models.database.Database;
 import me.dawey.erettsegifx.models.database.tables.Vizsga;
+import me.dawey.erettsegifx.models.database.tables.Vizsgazo;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import static me.dawey.erettsegifx.Main.database;
 
 public class Read2Controller {
     @FXML
@@ -40,8 +44,22 @@ public class Read2Controller {
     private TableView<Vizsga> vizsgaTable;
     @FXML
     private ComboBox<String> classComboBox;
+
+
     @FXML
     public void initialize() {
+
+        classComboBox.setItems(FXCollections.observableArrayList());
+        List<Vizsgazo> vizsgazok = database.getAllVizsgazok();
+        List<String> osztalyok = new ArrayList<>();
+
+        for (Vizsgazo vizsgazo : vizsgazok) {
+            if (!osztalyok.contains(vizsgazo.getOsztaly())) osztalyok.add(vizsgazo.getOsztaly());
+        }
+
+        for (String osztaly : osztalyok) {
+            classComboBox.getItems().add(osztaly);
+        }
         System.out.println("Read2Controller initialized");
     }
 

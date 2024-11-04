@@ -5,53 +5,53 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.TextField?>
-<BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="me.dawey.erettsegifx.controllers.CreateController" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <VBox alignment="CENTER" spacing="10.0">
-            <Label text="Vizsgazo hozzaadasa" textFill="white"/>
+            <Label text="Vizsgazo hozzaadasa" />
 
             <HBox spacing="10.0" alignment="CENTER">
-                <Label text="Vizsgazo Nev: " textFill="white"/>
+                <Label text="Vizsgazo Nev: " />
                 <TextField fx:id="vizsgazoNameField"/>
             </HBox>
             <HBox spacing="10.0" alignment="CENTER">
-                <Label text="Osztaly: " textFill="white"/>
+                <Label text="Osztaly: " />
                 <TextField fx:id="vizsgazoClassNameField"/>
             </HBox>
             <Button text="Vizsgazo hozaadas" onAction="#addVizsgazo"/>
 
-            <Label text="Vizsgatargy hozzaadasa" textFill="white"/>
+            <Label text="Vizsgatargy hozzaadasa"/>
             <HBox spacing="10.0" alignment="CENTER">
-                <Label text="Vizsgatargy neve:" textFill="white"/>
+                <Label text="Vizsgatargy neve:" />
                 <TextField fx:id="vizsgatargyNameField"/>
             </HBox>
             <HBox spacing="10.0" alignment="CENTER">
-                <Label text="Irmax:" textFill="white"/>
+                <Label text="Irmax:"/>
                 <TextField fx:id="irmaxField"/>
             </HBox>
             <HBox spacing="10.0" alignment="CENTER">
-                <Label text="Szomax:" textFill="white"/>
+                <Label text="Szomax:"/>
                 <TextField fx:id="szomaxField"/>
             </HBox>
             <Button text="Vizsgatargy hozzaadas" onAction="#addVizsgatargy"/>
 
-            <Label text="Vizsga hozzaadasa" textFill="white"/>
+            <Label text="Vizsga hozzaadasa" />
             <HBox spacing="10" alignment="CENTER">
-                <Label text="Vizsgazo azonosito:" textFill="white"/>
+                <Label text="Vizsgazo azonosito:" />
                 <TextField fx:id="vizsgaVizsgazoAzonositoField"/>
             </HBox>
             <HBox spacing="10" alignment="CENTER">
-                <Label text="Vizsgatargy azonosito:" textFill="white"/>
+                <Label text="Vizsgatargy azonosito:" />
                 <TextField fx:id="vizsgaVizsgatargyAzonositoField"/>
             </HBox>
             <HBox spacing="10" alignment="CENTER">
-                <Label text="Szobeli eredmeny:" textFill="white"/>
+                <Label text="Szobeli eredmeny:" />
                 <TextField fx:id="szobeliEredmenyField"/>
             </HBox>
             <HBox spacing="10" alignment="CENTER">
-                <Label text="Irasbeli eredmeny:" textFill="white"/>
+                <Label text="Irasbeli eredmeny:" />
                 <TextField fx:id="irasbeliEredmenyField"/>
             </HBox>
             <Button text="Vizsga hozzaadas" onAction="#addVizsga"/>

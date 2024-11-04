@@ -13,51 +13,40 @@
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.control.RadioButton?>
-<BorderPane style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx"
+<BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="me.dawey.erettsegifx.controllers.Read2Controller" stylesheets="@../../styles/forms-style.css">
     <Pane>
         <fx:define><ToggleGroup fx:id="caseGroup" /></fx:define>
         <VBox alignment="CENTER" spacing="10.0">
             <VBox>
-                <Label textFill="white" text="Vizsgara valo szures"/>
+                <Label text="Vizsgara valo szures"/>
             </VBox>
             <HBox spacing="10.0" alignment="CENTER">
-                    <CheckBox fx:id="vizsgazoCheckBox" textFill="white"/>
+                    <CheckBox fx:id="vizsgazoCheckBox"/>
                 <VBox>
-                    <Label text="Vizsgazo Name:" textFill="white"/>
+                    <Label text="Vizsgazo Neve:"/>
                     <TextField fx:id="vizsgazoNameField"/>
                 </VBox>
-                    <CheckBox fx:id="vizsgatargyCheckBox" textFill="white"/>
+                    <CheckBox fx:id="vizsgatargyCheckBox"/>
                 <VBox>
-                    <Label text="Vizsgatargy Name:" textFill="white"/>
+                    <Label text="Vizsgatargy Neve:"/>
                     <TextField fx:id="vizsgatargyNameField"/>
                 </VBox>
             </HBox>
             <HBox spacing="10.0" alignment="CENTER">
                 <CheckBox fx:id="classCheckBox"/>
-                <Label text="Osztaly: " textFill="white"/>
+                <Label text="Osztaly: "/>
                 <ComboBox fx:id="classComboBox">
-                    <items>
-                        <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="9A"/>
-                            <String fx:value="9B"/>
-                            <String fx:value="10A"/>
-                            <String fx:value="10B"/>
-                            <String fx:value="11A"/>
-                            <String fx:value="11B"/>
-                            <String fx:value="12A"/>
-                            <String fx:value="12B"/>
-                        </FXCollections>
-                    </items>
+
                 </ComboBox>
             </HBox>
             <HBox spacing="10.0" alignment="CENTER">
-                <Label text="Case Sensitivity:" textFill="white"/>
-                <RadioButton toggleGroup="$caseGroup" layoutX="160.0" layoutY="16.0" mnemonicParsing="false" text="Nagy karakter erzekeny" selected="true" fx:id="caseSensitiveRadioButton" textFill="white"/>
-                <RadioButton toggleGroup="$caseGroup" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" text="Nem nagy karakter erzekeny" fx:id="notCaseSensitiveRadioButton" textFill="white"/>
+                <Label text="Ballitas:"/>
+                <RadioButton toggleGroup="$caseGroup" layoutX="160.0" layoutY="16.0" mnemonicParsing="false" text="Nagy karakter erzekeny" selected="true" fx:id="caseSensitiveRadioButton"/>
+                <RadioButton toggleGroup="$caseGroup" layoutX="10.0" layoutY="16.0" mnemonicParsing="false" text="Nem nagy karakter erzekeny" fx:id="notCaseSensitiveRadioButton"/>
             </HBox>
-            <Button text="Apply Filter" onAction="#onFileredQueryRequest"/>
+            <Button text="Szures" onAction="#onFileredQueryRequest"/>
             <TableView fx:id="vizsgaTable" stylesheets="@../../styles/forms-style.css" styleClass="readTableView" VBox.vgrow="ALWAYS">
                 <columns>
                     <TableColumn fx:id="vizsgazoColumn" text="Vizsgazo"/>
@@ -66,7 +55,7 @@
                     <TableColumn fx:id="irasbeliColumn" text="Irasbeli"/>
                 </columns>
             </TableView>
-            <Button fx:id="backButton" text="Vissza" onAction="#goToRead" styleClass="windowButton" stylesheets="@../../styles/home-style.css"/>
+            <Button fx:id="backButton" text="Vissza" onAction="#goToRead"/>
         </VBox>
     </Pane>
 </BorderPane>
