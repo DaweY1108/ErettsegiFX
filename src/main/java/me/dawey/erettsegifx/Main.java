@@ -27,11 +27,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
         database = new Database();
-        Oanda oanda = new Oanda();
-        InstrumentCandlesResponse candles = oanda.getHistory("EUR_USD");
-        for (Candlestick candle : candles.getCandles()) {
-            System.out.println(candle.getTime() + " " + candle.getMid().getC());
-        }
     }
 
     //App entry point

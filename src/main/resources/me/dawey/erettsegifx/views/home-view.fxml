@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@../styles/home-style.css" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.HomeController">
 
     <top>
         <GridPane fx:id="topGridPane" alignment="CENTER" style="-fx-background-color: black" BorderPane.alignment="CENTER">

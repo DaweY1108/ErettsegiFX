@@ -5,6 +5,6 @@
 <?import javafx.scene.control.Button?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="me.dawey.erettsegifx.controllers.forex.ForexActualController" stylesheets="@../../styles/forms-style.css">
+            fx:controller="me.dawey.erettsegifx.controllers.forex.ForexActualController" >
 
 </BorderPane>
