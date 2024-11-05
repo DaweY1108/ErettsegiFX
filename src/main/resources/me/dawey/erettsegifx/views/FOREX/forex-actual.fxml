@@ -5,21 +5,21 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.forex.ForexActualController">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.forex.ForexActualController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Valassz devizapart">
+            <Label text="Válassz egy devizapárt:">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Bold Italic" size="17.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin></Label>
             <ComboBox fx:id="currency" onAction="#onSelect" prefWidth="150.0" />
-            <Label text="Aktualis ar">
+            <Label text="Aktuális ár:">
                <font>
-                  <Font size="17.0" />
+                  <Font name="System Italic" size="17.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
@@ -34,9 +34,9 @@
       </VBox>
    </center>
    <top>
-      <Label text="Aktualis ar lekerdezese" BorderPane.alignment="CENTER">
+      <Label text="Aktuális ár lekérdezése" BorderPane.alignment="CENTER">
          <font>
-            <Font name="System Bold" size="21.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Label>
    </top>

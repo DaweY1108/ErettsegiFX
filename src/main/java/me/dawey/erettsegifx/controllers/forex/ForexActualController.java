@@ -30,7 +30,7 @@ public class ForexActualController {
         String[] currencies = currency.getValue().split("_");
         PricingGetResponse response = oanda.getPricing(currency.getValue());
         ClientPrice prices = response.getPrices().get(0);
-        String text = "1 " + currencies[0] + " ara: " + prices.getCloseoutAsk() + " " + currencies[1] ;
+        String text = "1 " + currencies[0] + " = " + prices.getCloseoutAsk() + " " + currencies[1] ;
         price.setText(text);
     }
 }
