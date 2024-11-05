@@ -2,9 +2,10 @@ package me.dawey.erettsegifx;
 
 import com.j256.ormlite.logger.Level;
 import com.j256.ormlite.logger.Logger;
-import com.oanda.v20.account.AccountSummary;
+import com.oanda.v20.instrument.Candlestick;
 import com.oanda.v20.instrument.InstrumentCandlesResponse;
-import com.oanda.v20.pricing.PricingGetResponse;
+import com.oanda.v20.primitives.DateTime;
+import com.oanda.v20.trade.Trade;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -27,12 +28,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
         database = new Database();
-
-
-
-        System.out.println("Adatbazis inicializalasa...");
-        System.out.println("Adatbazis inicializalva!");
-        System.out.println("Az app sikeresen elindult!");
     }
 
     //App entry point

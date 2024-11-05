@@ -6,12 +6,24 @@
 
 .windowButton:hover {
     -fx-background-color: rgba(68, 68, 68, 0.29);  /* Gray background on hover */
+    -fx-border-radius: 1;
+    -fx-border-color: #fff;
 }
 
 .windowButtonExit {
     -fx-background-color: transparent;
     -fx-text-fill: red;
     -fx-font-size: 13px;
+}
+
+.windowButtonMinimize {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.windowButtonMinimize:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.29);
 }
 
 .windowButtonExit:hover {

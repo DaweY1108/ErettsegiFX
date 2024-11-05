@@ -60,6 +60,7 @@ public class SoapDownload2Controller {
         });
         BankManager bankManager = new BankManager();
         List<String> currencies = bankManager.getCurrencies();
+        currencies.removeAll(List.of("HUF"));
         currencyChoiceBox.getItems().addAll(currencies);
         currencyChoiceBox.getSelectionModel().selectFirst();
         System.out.println("SoapDownload2Controller initialized");
@@ -68,6 +69,8 @@ public class SoapDownload2Controller {
     public void soapDownloadButtonAction() {
         soapDownloadLabel.setTextFill(Color.GREEN);
         soapDownloadLabel.setText("Adatok letöltése...");
+        String fromDateString = "";
+        String toDateString = "";
 
         if (currencyRates.isSelected()) {
             if (dateFrom.getValue() == null || dateTo.getValue() == null || currencyChoiceBox.getValue() == null) {
@@ -81,6 +84,8 @@ public class SoapDownload2Controller {
                 soapDownloadLabel.setText("A kezdő dátum nem lehet későbbi, mint a befejező dátum!");
                 return;
             }
+            fromDateString = dateFrom.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            toDateString = dateTo.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         }
 
         if (!currencies.isSelected() && !actualRates.isSelected() && !currencyRates.isSelected()) {
@@ -88,9 +93,6 @@ public class SoapDownload2Controller {
             soapDownloadLabel.setText("Kérlek válassz legalább egy opciót!");
             return;
         }
-
-        String fromDateString = dateFrom.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-        String toDateString = dateTo.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
         // Könyvtár választása
         DirectoryChooser dc = new DirectoryChooser();

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.forex.ForexOpenedPosController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Nyitott pozíciók">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableView" prefHeight="400.0">
+              <columns>
+                  <TableColumn fx:id="idColumn" text="ID"/>
+                  <TableColumn fx:id="instrumentColumn" text="Devizapár"/>
+                  <TableColumn fx:id="openTimeColumn" text="Nyitás"/>
+                  <TableColumn fx:id="currentUnitsColumn" text="Egyenleged"/>
+                  <TableColumn fx:id="priceColumn" text="Árfolyam"/>
+                  <TableColumn fx:id="unrealizedPLColumn" text="Nyereség / Veszteség"/>
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

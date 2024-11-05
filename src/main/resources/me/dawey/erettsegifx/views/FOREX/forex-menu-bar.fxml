@@ -4,6 +4,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.MenuButton?>
 <HBox alignment="CENTER" minWidth="30" spacing="20.0" style="-fx-background-color: black" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.forex.ForexMenuBarController" fx:id="forexMenuBarHBox">
-        <Button onAction="#forexTestButtonAction" styleClass="windowButton" text="Forex bar button" />
+        <Button onAction="#billing" styleClass="windowButton" text="Számla" />
+        <Button onAction="#actual" styleClass="windowButton" text="Aktuális" />
+        <Button onAction="#history" styleClass="windowButton" text="Historikus" />
+        <Button onAction="#posOpen" styleClass="windowButton" text="PozNyitás" />
+        <Button onAction="#posClosed" styleClass="windowButton" text="PozZárás" />
+        <Button onAction="#openedPos" styleClass="windowButton" text="NyitottPoz" />
 
 </HBox>

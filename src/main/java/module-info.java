@@ -25,4 +25,5 @@ module me.dawey.erettsegifx {
     exports me.dawey.erettsegifx.controllers.threading;
     opens me.dawey.erettsegifx.controllers.threading to javafx.fxml;
 
+
 }

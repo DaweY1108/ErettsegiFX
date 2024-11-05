@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.forex.ForexPosCloseController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Válassz pozíció ID-t">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+             <ComboBox fx:id="positionIdComboBox" prefWidth="150.0">
+                 <VBox.margin>
+                     <Insets bottom="10.0" />
+                 </VBox.margin>
+             </ComboBox>
+             <Button fx:id="closePositionButton" mnemonicParsing="false" prefWidth="100.0" text="Zárás" />
+             <Label fx:id="statusLabel">
+                 <padding>
+                     <Insets top="10.0" />
+                 </padding>
+             </Label>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Label text="Pozíció zárása" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

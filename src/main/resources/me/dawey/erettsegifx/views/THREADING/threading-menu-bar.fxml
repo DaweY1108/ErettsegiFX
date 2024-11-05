@@ -4,6 +4,5 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.MenuButton?>
 <HBox alignment="CENTER" minWidth="30" spacing="20.0" style="-fx-background-color: black" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.threading.ThreadingMenuBarController" fx:id="forexMenuBarHBox">
-        <Button onAction="#threadingTestButtonAction" styleClass="windowButton" text="Threading bar button" />
 
 </HBox>

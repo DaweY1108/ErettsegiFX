@@ -66,6 +66,7 @@ public class SoapGraphController {
         });
         BankManager bankManager = new BankManager();
         List<String> currencies = bankManager.getCurrencies();
+        currencies.removeAll(List.of("HUF"));
         currencyChoiceBox.getItems().addAll(currencies);
         currencyChoiceBox.getSelectionModel().selectFirst();
         System.out.println("SoapGraphController initialized");

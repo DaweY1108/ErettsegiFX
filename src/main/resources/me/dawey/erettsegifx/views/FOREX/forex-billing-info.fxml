@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.forex.ForexBillingInfoController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Számlainformációk">
+               <font>
+                  <Font name="System Bold Italic" size="31.0" />
+               </font></Label>
+            <TextArea fx:id="data" editable="false" prefHeight="400.0" prefWidth="200.0" text="Ecample">
+               <font>
+                  <Font name="Droid Serif Italic" size="14.0" />
+               </font></TextArea>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

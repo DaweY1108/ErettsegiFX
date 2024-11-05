@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.dawey.erettsegifx.controllers.forex.ForexHistoryController">
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="TOP_CENTER" spacing="15.0" prefHeight="100.0" prefWidth="600.0">
+                    <children>
+                        <VBox alignment="CENTER">
+                            <Label text="-tól" />
+                            <DatePicker fx:id="startDatePicker" />
+                        </VBox>
+                        <VBox alignment="CENTER">
+                            <Label text="-ig" />
+                            <DatePicker fx:id="endDatePicker" />
+                        </VBox>
+                        <VBox alignment="CENTER">
+                            <Label text="Devizapár" />
+                            <ComboBox fx:id="currencyPairComboBox" prefWidth="150.0" />
+                        </VBox>
+                    </children>
+                </HBox>
+                <Button fx:id="fetchDataButton" text="Lekérés" />
+                <Label fx:id="statusLabel" />
+                <TableView fx:id="dataTableView" prefHeight="200.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="dateColumn" text="Dátum" prefWidth="150.0" />
+                        <TableColumn fx:id="priceColumn" text="Ár" prefWidth="150.0" />
+                    </columns>
+                </TableView>
+                <LineChart fx:id="priceLineChart" title="Árfolyamok" prefHeight="300.0" prefWidth="600.0">
+                    <xAxis>
+                        <CategoryAxis fx:id="xAxis" label="Dátum" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxis" label="Ár" />
+                    </yAxis>
+                </LineChart>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
