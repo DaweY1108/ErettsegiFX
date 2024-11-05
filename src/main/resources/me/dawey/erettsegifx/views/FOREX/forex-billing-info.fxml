@@ -12,7 +12,10 @@
                <font>
                   <Font name="System Bold Italic" size="31.0" />
                </font></Label>
-            <TextArea fx:id="data" editable="false" prefHeight="400.0" prefWidth="200.0" />
+            <TextArea fx:id="data" editable="false" prefHeight="400.0" prefWidth="200.0" text="Ecample">
+               <font>
+                  <Font name="Droid Serif Italic" size="14.0" />
+               </font></TextArea>
          </children>
       </VBox>
    </center>

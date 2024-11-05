@@ -18,7 +18,7 @@ public class Oanda {
     private static final AccountID accountID = new AccountID("101-004-30070413-001");
     private static final String token = "84c6afbec99a536c7ee145a1621ebc1c-0fa7b8303562c3be9c0bb9dee0f56b5f";
     private Context ctx;
-    private List<String> instruments = List.of("EUR_USD", "USD_HUF", "EUR_HUF", "USD_JPY", "GBP_USD", "USD_CAD", "AUD_USD", "NZD_USD", "USD_CHF");
+    private final List<String> instruments = List.of("EUR_USD", "USD_HUF", "EUR_HUF", "USD_JPY", "GBP_USD", "USD_CAD", "AUD_USD", "NZD_USD", "USD_CHF");
 
     public Oanda() {
         ctx = new Context(url, token);
@@ -43,8 +43,8 @@ public class Oanda {
     /**
      *Aktualis arak lekerese
      */
-    public PricingGetResponse getPricing() {
-        PricingGetRequest request = new PricingGetRequest(accountID, instruments);
+    public PricingGetResponse getPricing(String instrument) {
+        PricingGetRequest request = new PricingGetRequest(accountID, List.of(instrument));
         try {
             return ctx.pricing.get(request);
         } catch (Exception e) {
