@@ -40,6 +40,7 @@ public class ThreadingController {
                 }
             }
         });
+        oneSecondThread.setDaemon(true);
 
         // 2 másodperces szál
         twoSecondThread = new Thread(() -> {
@@ -55,6 +56,7 @@ public class ThreadingController {
                 }
             }
         });
+        twoSecondThread.setDaemon(true);
 
         oneSecondThread.start();
         twoSecondThread.start();

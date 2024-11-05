@@ -37,7 +37,7 @@
                     <TableColumn fx:id="szomaxColumn" text="Szomax" />
                 </columns>
             </TableView>
-            <Button fx:id="btGoToReadTwo" text="Go To Read 2" onAction="#goToReadTwo"/>
+            <Button fx:id="btGoToReadTwo" text="Tovabb a OLVAS2-re" onAction="#goToReadTwo"/>
         </VBox>
     </Pane>
 </BorderPane>
